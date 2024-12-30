@@ -36,25 +36,25 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
 #### Setup and Installation
 <ul>
   <li><h5>Clone the Repository:</h5> </li>
-  git clone https://github.com/your-username/culinary-delight.git
+  git clone https://github.com/your-username/culinary-delight.git <br>
   cd culinary-delight
 
-  ##### Create a Virtual Environment:
-  python -m venv restaurant_env
-  source restaurant_env/bin/activate  # For Linux/macOS
-  restaurant_env\Scripts\activate  # For Windows
+  <li><h5>Create a Virtual Environment:</h5> </li>
+  python -m venv restaurant_env <br>
+  source restaurant_env/bin/activate  # For Linux/macOS <br>
+  restaurant_env\Scripts\activate  # For Windows <br>
 
-  ##### Install Dependencies:
+  <li><h5>Install Dependencies:</h5> </li>
   pip install -r requirements.txt
 
-  ##### Install Dependencies:
+  <li><h5>Install Dependencies:</h5> </li>
   python app.py
 
 #### Notes
   Ensure you have Python and pip installed.
   Access the website at http://127.0.0.1:5000/
 
-  ##### Exiting SQLite Command Line
+  <li><h5>Exiting SQLite Command Line</h5> </li>
   .exit
 </ul>
   
