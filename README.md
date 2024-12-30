@@ -64,6 +64,13 @@ culinary-delight/
   restaurant_env\Scripts\activate  # For Windows <br>
   ```
 
+  <li><h5>Create a Virtual Environment:(In Anaconda Prompt)</h5> </li>
+
+  ```
+  conda create --name restaurant_env python=3.8 <br>
+  conda activate restaurant_env <br> #Activate the Environment
+  ```
+
   <li><h5>Install Dependencies:</h5> </li>
   
   ```
@@ -89,7 +96,10 @@ culinary-delight/
 ![Screenshot 2024-12-30 221136](https://github.com/user-attachments/assets/a92dff05-d3ca-4884-8621-8746f8106973)
 
   <li><h5>Exiting SQLite Command Line</h5> </li>
+
+  ```
   .exit
+  ```
 </ul>
 
 
