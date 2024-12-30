@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIYANI</title>
+    <style>
+        body{
+            background-image: url('Brown_Img1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color:antiquewhite;
+            color: antiquewhite;
+            padding: 15px;
+            border: 1px solid antiquewhite;
+            border-radius: 100%;
+            display: contents; /* Initially hide the button */
+            cursor:pointer; /* Change the cursor to pointer when hovering over the button */
+            transition: background-cocor 0.3s;/* Add a smooth transition for the background color */
+        }
+        .back-to-top:hover {
+            background-color: rgb(135, 44, 5); /* Change the background color when hovering over the button */
+        }
+        .back-to-top i {
+            font-size: 1.5rem;
+        }
+
+        .heading{
+            font-size: 50px;
+            font-family: 'Lucida Calligraphy';
+            font-weight: bolder;
+            text-align: center;
+            color:antiquewhite;
+            padding: 10px 10px;
+
+        }
+        #myDIV {
+            border: 1px solid black;
+            width: 400px;
+            height: 100px;
+            animation: mymove 5s infinite;
+        }
+        @keyframes mymove {
+            70% {font-size: 70px;}
+        }
+        .paragraph{
+            color:antiquewhite;
+            font-weight: bold;
+            font-size: large;
+            margin: 40px
+        }
+
+        .table1{
+            width:90%;
+            color: antiquewhite;
+            height: 2%;
+            text-align: center;
+            margin: 5%;
+
+        }
+        .table2{
+            width:90%;
+            border-collapse: collapse;
+            color: antiquewhite;
+            height: 2%;
+            text-align: center;
+            margin: 5%;
+
+            border: 1px solid white;
+        }
+        /*To make VEG and NON-VEG CELLS just like a BUTTON*/
+        .table1 th{
+            cursor: pointer;
+            /*padding: 10px;*/
+
+        }
+        /*For vega nd nono veg */
+        .th1{
+            width: 50%;
+            padding: 10px 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: antiquewhite;
+            
+        }
+        /*for veg table*/
+        th{
+            width: 50%;
+            padding: 10px 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(114, 42, 8);
+            
+        }
+        td{
+            max-height: 25%;
+            border: 10px solid transparent;
+        }
+
+        /*VEG and NON-veg Button like tables*/
+        .rounded-rectangle{
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+
+        th.veg:hover {background-color: rgb(8, 114, 26)}
+        th.non-veg:hover {background-color: rgb(230, 65, 40)}
+        tr.row:hover{background-color: rgba(218, 171, 171, 0.884);
+                    color: rgb(120, 4, 4);}
+        a:link{
+            color: antiquewhite;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited{
+            color: antiquewhite;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:active{
+            color: antiquewhite;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10%;
+
+        }
+        .nsml{
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /*small medium large to appear on each row when the curser moves on it */
+
+
+        /*Images slide*/
+        /* Slideshow container */
+
+
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <h1 class="heading">BRIYANI</h1>
+    </div>
+    <div>
+        <p class="paragraph">Biryani (/bɜːrˈjɑːni/) is a mixed rice dish most popular in South Asia and was thought to have originated from ancient Iran.[1] It is made with rice, some type of meat (chicken, beef, goat, lamb, prawn, or fish) and spices. To cater to vegetarians, in some cases, it is prepared by substituting vegetables for the meat.[2] Sometimes eggs and/or potatoes are added.[3]
+        </p>
+        <p class="paragraph"> Biryani, a beloved Indian rice dish, has a fascinating history. It is believed to have originated in Iran and then traveled to the Indian subcontinent during the Mughal era. Over time, it adapted and evolved, becoming a culinary masterpiece. The irresistible flavors and aromatic spices made it a favorite among food enthusiasts.
+        </p>
+        <p class="paragraph">
+            Biryani is one of the most popular dishes in South Asia and among the South Asian diaspora, although the dish is often associated with the region’s Muslim population in particular.[4] Similar dishes are also prepared in other parts of the world such as in Iraq, Myanmar, Thailand, and Malaysia.[5] Biryani is the single most-ordered dish on Indian online food ordering and delivery services, and has been labelled as the most popular dish overall in India.[4][6]
+        </p>
+    </div>
+
+    <div>
+        <table class="table1">
+            <tr>
+                <th class="rounded-rectangle th1 veg" onclick="location.href='#veg-link'">VEG BRIYANI</th>
+                <th class="rounded-rectangle th1 non-veg" onclick="location.href='#non-veg-link'">NON-VEG BIRYANI</th>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="veg-link">VEG BRIYANI</h1>
+        <hr>
+    </div>
+    /*Veg Briyani table */
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite; ">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Small</th>
+                <th style="width: 10%;">Medium</th>
+                <th style="width: 10%;">Large</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/PaneerBiryani_Img.jpg"
+                    alt="Panner Biryani Image"
+                >
+                </td>
+                <td>
+                    <h1>Panner Biryani</h1>
+                    <p style="font-size: small;">(A labor-of-love dish with soft paneer cubes, fragrant basmati rice, and flavorful spices, perfect for special occasions or when craving a vegetarian biryani4.)
+                </td>
+                <td>120/-</td>
+                <td>240/-</td>
+                <td>350/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/MushroomBiryani_Img.jpg"
+                    alt="Mushroom Biryani Image"
+                >
+                </td>
+                <td>
+                    <h1>Mushroom Biryani</h1>
+                    <p style="font-size: small;">(A vegetarian spin on the classic biryani, featuring fluffy long-grain rice layered with spicy baby corn curry, baked until aromatic.)
+                    </p>
+                </td>
+                <td>120/-</td>
+                <td>240/-</td>
+                <td>350/-</td>
+            </tr> 
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/BabyCornBriyani_Img.avif"
+                    alt="BabyCorn Biryani Image"
+                >
+                </td>
+                <td>
+                    <h1>BabyCorn Biryani</h1>
+                    <p style="font-size: small;">(A vegetarian spin on the classic biryani, featuring fluffy long-grain rice layered with spicy baby corn curry, baked until aromatic.)
+                    </p>
+                </td>
+                <td>120/-</td>
+                <td>240/-</td>
+                <td>350/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/Cauliflower Biryani_Img.jpg "
+                    alt="Cauliflower Biryani Image"
+                >
+                </td>
+                <td>
+                    <h1>Cauliflower Biryani</h1>
+                    <p style="font-size: small;">(A flavorful South Indian-style biryani made with cauliflower florets, coconut, herbs, and spices1.)
+                    </p>
+                </td>
+                <td>120/-</td>
+                <td>240/-</td>
+                <td>350/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/Mixed Veg_Img.jpg "
+                    alt="Mixed Veg Biryani Image"
+                >
+                </td>
+                <td>
+                    <h1>Mixed Veg Biryani</h1>
+                    <p style="font-size: small;">(Veg mixed biryani is a flavorful rice dish prepared with aromatic spices, assorted vegetables, and fragrant basmati rice.)
+                    </p>
+                </td>
+                <td>120/-</td>
+                <td>240/-</td>
+                <td>350/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+    /*Non-Veg Briyani Table*/
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="non-veg-link">NON-VEG BRIYANI</h1>
+        <hr>
+    </div>
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite; ">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Small</th>
+                <th style="width: 10%;">Medium</th>
+                <th style="width: 10%;">Large</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/ChickenBriyani_Img1.jpg"
+                    alt="Chicken Biryani Image"
+
+                >
+                </td>
+                <td>
+                    <h1>Chicken Briyani</h1>
+                    <p style="font-size: small;">(Basmathi Rice,Chicken thighs,hung curd,onion,tomato,milk,saffron and a melange of whole and ground spices.)</p>
+                </td>
+                <td>220/-</td>
+                <td>340/-</td>
+                <td>450/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/Mutton Briyani_Img.webp"
+                    alt="Mutton Biryani Image"
+                >
+                </td>
+                <td>
+                    <h1>Mutton Biryani</h1>
+                    <p style="font-size: small;">(This biryani is made with flavorful mutton cooked in fluffy rice.)</p>
+                </td>
+                <td>320/-</td>
+                <td>440/-</td>
+                <td>550/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/Prawns biryani_Img.jpg"
+                    alt="Prawns Biryani  Image"
+                >
+                </td>
+                <td>
+                    <h1>Prawns Biryan</h1>
+                    <p style="font-size: small;">(rawns biryani is a dish made with prawns, layered rice, and spices. It's a variation of biryani, which is made with meat, chicken, or prawns marinated in yogurt and spices, layered with rice, and cooked)</p>
+                </td>
+                <td>320/-</td>
+                <td>440/-</td>
+                <td>550/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/Kashmari biryani_Img.jpg"
+                    alt="Kashmari Biryani Image"
+                >
+                </td>
+                <td>
+                    <h1>Kashmari Biryani</h1>
+                    <p style="font-size: small;">(This biryani is made with unique flavors of Kashmiri spices and Dahi. It's served with curries, raita, onions, or lemons.)</p>
+                </td>
+                <td>220/-</td>
+                <td>340/-</td>
+                <td>450/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/Chettinad biryani_Img1.jpg"
+                    alt="Chettinad biryan Image"
+                >
+                </td>
+                <td>
+                        <h1 >Chettinad Biryan</h1>
+                        <p style="font-size: small;">(This biryani is made with a blend of spices like fennel, cinnamon, red chili powder, and tamarind.)</p>
+                </td>
+                <td>220/-</td>
+                <td>340/-</td>
+                <td>450/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="../INDIA_IMAGES/Kacchi biryani_Img.jpg"
+                    alt="Kacchi Biryani  Image"
+                >
+                </td>
+                <td>
+                    <h1>Kacchi Biryan</h1>
+                    <p style="font-size: small;">(This biryani is made with tender mutton meat, fragrant spices, and aromatic Basmati rice.)</p>
+                </td>
+                <td>320/-</td>
+                <td>440/-</td>
+                <td>550/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- Your content goes here -->
+    <button class="back-to-top hidden">
+        <i class="fas fa-arrow-up"></i>
+        <h4>top</h4>
+    </button>
+
+    <!-- Include Font Awesome for the up arrow icon -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <!-- Add your custom JavaScript code here -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTopButton = document.querySelector(".back-to-top");
+            window.addEventListener("scroll", function () {
+                if (window.pageYOffset > 100) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            });
+
+            backToTopButton.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+
+    /*Script for add to cart*/
+
+    /*Slide-Show*/
+
+
+</body>
+</html>

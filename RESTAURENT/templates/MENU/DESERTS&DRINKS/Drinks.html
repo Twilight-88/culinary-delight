@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRINKS</title>
+    <link rel="stylesheet" href="styled.css">
+    <style>
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* ensure it's on top of other elements */
+        }
+
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .main{
+            width: 100%;
+        }
+
+        .zoom {
+            transform: scale(0);
+            transition: transform 1.0s ease-in-out;
+        }
+        
+       .zoom.show {
+            transform: scale(1);
+        }
+        /*img{
+            filter: brightness(0.5);
+        }*/
+
+        .table1{
+            border-collapse: collapse;
+            padding: 0;
+            border-spacing: 0;
+            width: 100%;
+            background-color: black;
+        }
+        table,tr,td{
+            border: none;
+        }
+        .tr1{
+            height: 80px;
+            width: 100%;
+        }
+        .td1{
+            width: 12%;
+            height: 30px;
+        }
+
+        .heading{
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+        .heading a{
+            color:#96ef5f;
+        }
+        .text{
+            text-decoration: none;
+            text-align: center;
+            font-size: 17px;
+            /*font-weight: bold;*/
+            color: #fff;
+            
+        }
+        a:hover{
+            color:#96ef5f;
+            transition: 0.5s all ease;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        .header{
+            background-image: url('');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            /*position: fixed;  added */
+            top: 80px; /* added */    width: 100%; /* added */
+            z-index: 0; /* added */
+            /*background-attachment: fixed;*/
+        }
+        .table-container {
+            position: relative;
+            z-index: 1; /* ensure the table is on top of the overlay */
+        }
+
+
+        /*Body*/
+        table,tr,td,th{
+            /*border: 2px solid red;*/
+            margin: 0px;
+            border-collapse: collapse;
+        }
+        .table2{
+            width: 100%;
+            margin-top: 0%;
+            padding: 0;
+            border-spacing: 0;
+            margin: 0px;
+            margin-top: 0px;
+        }
+        .overlay{
+            background: rgba(0, 0, 0, 0.386);
+            height: 350px;
+            position: absolute; /* added */
+            top: 0; /* added */
+            width: 100%; /* added */
+            z-index: 0; /* added */
+            margin: 0px;
+            margin-top: 80px;
+        }
+        .image {
+            filter: brightness(0.8); /* adjust the value to your liking */
+        }
+        .welcome{
+            font-size: 70px;
+            color: #96ef5f;
+            font-weight: bold;
+            padding-left: 50px;
+            margin-top: 0px;
+            padding-top: 0%;
+            left: 50%;
+            /*padding-top: 30px; */
+        }
+        .p1{
+            position: relative;
+            color: #fff;
+            font-size: 300%;
+        }
+
+        .table3{
+            width: 90% ;
+
+            color: #fff;
+            margin: 5%;
+            padding-top: 0;
+        }
+        th{
+            font-size: 30px;
+            color: #96ef5f;
+        }
+        .table3 td{
+            font-size: 20px;
+            padding: 5px;
+        }
+        .table3 td{
+            padding-left: 20px;
+        }
+        hr{
+            width: 90%;
+            color: #96ef5f;
+            margin: 0;
+            margin-left: 5%;
+        }
+
+        .table4{
+            width: 90% ;
+
+            color: #fff;
+            margin: 5%;
+            padding-top: 0;
+        }
+        .table4 td{
+            font-size: 20px;
+            padding: 5px;
+        }
+        .table4 td{
+            padding-left: 20px;
+        }
+        /*@keyframes slideInLeft {
+            from{
+                transform: translateX(-100vh);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        .slideInLeft {
+            animation: slideInLeft 5s ease-inforwards;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+            animation-timeline: var(0.3s);
+        }*/
+
+        .toppage{
+            background-color: rgb(66, 66, 3);
+            color: #96ef5f;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5%;
+            margin-left: 93%;
+            border-radius: 100px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .toppage:hover{
+            color: #96ef5f;
+        }
+
+        .table3 th, .table3 td {
+            transform: translateX(-100%);
+            transition: transform 1s ease-in-out;
+        }
+
+        .table3 th.show, .table3 td.show {
+            transform: translateX(0);
+        }
+
+                .table4 th, .table4 td {
+        transform: translateX(100%); /* initial position: off-screen to the right */
+        transition: transform 1s ease-in-out;
+        }
+
+        .table4 th.show, .table4 td.show {
+        transform: translateX(0); /* final position: original position */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <nav>
+                <div class="table-container">
+                    <table class="table1">
+                        <tr class="tr1">
+                            <td class=" heading td1" style="width: 28%;"><div class="logo zoom">
+                                <a href="{{ url_for('delight') }}">DELIGHT</a>
+                                </div>
+                            </td>
+                            <td class="text td1"><a href="{{ url_for('delight') }}">HOME</a></td>
+                            <td class="text td1"><a href="{{ url_for('about') }}">OUR STORY</a></td>
+                            <td class="text td1"><a href="{{ url_for('menu') }}" target="_self">MENU</a></td>
+                            <td class="text td1"><a href="{{ url_for('reserve') }}">RESERVATION</a></td>
+                            <td class="text td1"><a href="{{ url_for('service') }}">SERVICES</a></td>
+                            <td class="text td1"><a href="{{ url_for('contact') }}">CONTACT US</a></td>
+                        </tr>
+                    </table>
+                </div>  
+            </nav>
+
+            <table class="table2">
+                <tr>
+                    <td colspan="2">
+                       <img src="{{ url_for('static', filename='IMAGES/D&DImg/Drinks2.jpg') }}" alt="Drinks" style="width: 100%; height: 400px; object-fit: cover;" class="image">
+                       <div class="overlay">
+                        <div class="content ">
+                            <p class="welcome"><br><br>DRINKS</p>
+                            <p class="welcome" style="padding-top: 0%;font-size: 30px; color: #96ef5f;">Experience the art of mixology</p>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 75%;" height="35%">
+                        <div class="slideInLeft">
+                            <table class="table3">
+                                <tr>
+                                    <th colspan="2" style="width: 50%;">
+                                        Cocktails<hr>
+                                    </th>
+                                    <th colspan="2" style="width: 50%;">
+                                        Beer<hr>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>Margarita</td>
+                                    <td>$8</td>
+                                    <td>Natty Boh (National Bohemian Beer)</td>
+                                    <td>$3</td>
+                                </tr>
+                                <tr>
+                                    <td>Espresso Martini</td>
+                                    <td>$10</td>
+                                    <td>Narragansett Lager</td>
+                                    <td>$4</td>
+                                </tr>
+                                <tr>
+                                    <td>Mojito</td>
+                                    <td>$9</td>
+                                    <td>Pabst Blue Ribbon</td>
+                                    <td>$4</td>
+                                </tr>
+                                <tr>
+                                    <td>Pimm's </td>
+                                    <td>$12</td>
+                                    <td>High Life</td>
+                                    <td>$5</td>
+                                </tr>
+                                <tr>
+                                    <td>Cosmopolitan </td>
+                                    <td>$15</td>
+                                    <td>3 Floyd's Barrel-Aged Dark Lord de Muerte</td>
+                                    <td>$50 for 650ml</td>
+                                </tr>
+                                <tr>
+                                    <td>Whiskey Sour</td>
+                                    <td>$12</td>
+                                    <td>Pabst Blue Ribbon </td>
+                                    <td>$6</td>
+                                </tr>
+                                <tr>
+                                    <td>Daiquiri </td>
+                                    <td>$8</td>
+                                    <td>The Lost Abbey Cable Car Kriek</td>
+                                    <td>$923 for 750ml</td>
+                                </tr>
+                                <tr>
+                                    <td>Gin and Tonic </td>
+                                    <td>$10</td>
+                                    <td>Busch Beer </td>
+                                    <td>$4</td>
+                                </tr>
+                                <tr>
+                                    <td>Rum and Coke </td>
+                                    <td>$7</td>
+                                    <td>Pabst Blue Ribbon</td>
+                                    <td>$6</td>
+                                </tr>
+                                <tr>
+                                    <td>Long Island Iced Tea</td>
+                                    <td>$16</td>
+                                    <td>Guinness</td>
+                                    <td>$10</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td style="width: 25%;" height="35%">
+                        <img src="{{ url_for('static', filename='IMAGES/D&DImg/DarkDrink1.jpg') }}" alt="drink" style="width: 100%;height: 300px; object-fit: cover;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="table4" style="margin: 5px;width: 98%;padding-bottom: 20px;">
+                            <tr>
+                                <td rowspan="11">
+                                    <img src="{{ url_for('static', filename='IMAGES/D&DImg/CT6.avif') }}" alt="Drink" style="width: 100%; height: 500px; object-fit: cover;" class="image">
+                                </td>
+                                <th colspan="2" style="width: 35%;">Wine<hr></th>
+                                <th colspan="2" style="width: 35%;">Mocktails<hr></th>
+                            </tr>
+                            <tr>
+                                <td>Red wine</td>
+                                <td>$30</td>
+                                <td>Caribbean Mojito</td>
+                                <td>$5</td>
+                            </tr>
+                            <tr>
+                                <td>White wine</td>
+                                <td>$50</td>
+                                <td>Lychee Martini</td>
+                                <td>$5</td>
+                            </tr>
+                            <tr>
+                                <td>Rose</td>
+                                <td>$7</td>
+                                <td>Non-Alcoholic Tasting Pack</td>
+                                <td>$63</td>
+                            </tr>
+                            <tr>
+                                <td>Dessert wine</td>
+                                <td>$25</td>
+                                <td>Mocktails Uniquely Crafted</td>
+                                <td>$12</td>
+                            </tr>
+                            <tr>
+                                <td>Sparkling wine</td>
+                                <td>$15</td>
+                                <td>Sansgria</td>
+                                <td>$25</td>
+                            </tr>
+                            <tr>
+                                <td>Chardonny</td>
+                                <td>$20</td>
+                                <td>Mockscow Mule</td>
+                                <td>$30</td>
+                            </tr>
+                            <tr>
+                                <td>Pinot gris</td>
+                                <td>$15</td>
+                                <td>Nitro Ready-To-Drink Non-Alcoholic Cocktails</td>
+                                <td>$20</td>
+                            </tr>
+                            <tr>
+                                <td>Cabernet Sauvignon</td>
+                                <td>$15</td>
+                                <td>Random Assortment of Classic Mocktails</td>
+                                <td>$18</td>
+                            </tr>
+                            <tr>
+                                <td>Merlot</td>
+                                <td>$16</td>
+                                <td>Low-Calorie Mocktail</td>
+                                <td>$15</td>
+                            </tr>
+                            <tr>
+                                <td>Pinot noir</td>
+                                <td>$12</td>
+                                <td>Sugar-Free Mocktail</td>
+                                <td>$10</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td colspan="2" style="background-image: url('{{ url_for('static', filename='IMAGES/D&DImg/footer6.webp') }}'); background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+                            <table class="table3" style="width: 80%;margin-left: 10%;text-align: center;">
+                                    <tr>
+                                        <th colspan="2">Shots<hr></th>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%;">Five Drinks Co. Mojito Cocktail</td>
+                                        <td style="width: 50%;">$12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Caribbean Mojito</td>
+                                        <td>$20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lychee Martini</td>
+                                        <td>$19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sansgria</td>
+                                        <td>$15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mockscow Mule</td>
+                                        <td>$22</td>
+                                    </tr>
+                            
+                            </table>
+                            <div style="position: fixed; bottom: 20px; right: 70px;">
+                                <button class="toppage" onclick="scrollToTop()">&#8593;</button>
+                            </div>
+                        </td> 
+                    </tr>
+                </tr>
+            </table>
+            <!--<footer>
+                <img src="Footer9.jpg" alt="footer" style="width: 100%; height: 200px;object-fit: cover;">
+            </footer> -->
+
+        </div>
+    </div>
+
+
+    <script>
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling
+        });
+    }
+    </script>
+
+            <script>
+                let zoomElements = document.querySelectorAll('.zoom');
+                let delay = 0;
+
+                zoomElements.forEach(element => {
+                    setTimeout(() => {
+                        element.classList.add('show');
+                    }, delay);
+                    delay += 200; // adjust the delay time as needed
+                });
+            </script>
+    <script>
+        const table3Cells = document.querySelectorAll('.table3 th, .table3 td');
+
+        window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const table3Top = document.querySelector('.table3').offsetTop;
+        const table3Height = document.querySelector('.table3').offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (scrollPosition + viewportHeight > table3Top + table3Height / 2) {
+            table3Cells.forEach(cell => {
+            cell.classList.add('show');
+            });
+        }
+        });
+    </script>
+
+    <script>
+        const table4Cells = document.querySelectorAll('.table4 th, .table4 td');
+
+        window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const table4Top = document.querySelector('.table4').offsetTop;
+        const table4Height = document.querySelector('.table4').offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (scrollPosition + viewportHeight > table4Top + table4Height / 2) {
+            table4Cells.forEach(cell => {
+            cell.classList.add('show');
+            });
+        }
+        });
+    </script>
+</body>
+</html>

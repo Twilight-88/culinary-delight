@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR STORY</title>
+    <link rel="stylesheet" href="styled.css">
+    <style>
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* ensure it's on top of other elements */
+        }
+
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100%;
+        }
+
+        .zoom {
+            transform: scale(0);
+            transition: transform 1.0s ease-in-out;
+        }
+        
+       .zoom.show {
+            transform: scale(1);
+        }
+        /*img{
+            filter: brightness(0.5);
+        }*/
+
+        .table1{
+            border-collapse: collapse;
+            padding: 0;
+            border-spacing: 0;
+            width: 100%;
+            background-color: black;
+        }
+        table,tr,td{
+            border: none;
+        }
+        .tr1{
+            height: 80px;
+            width: 100%;
+        }
+        .td1{
+            width: 12%;
+            height: 30px;
+        }
+
+        .heading{
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+        .heading a{
+            color: gold;
+        }
+        .text{
+            text-decoration: none;
+            text-align: center;
+            font-size: 17px;
+            /*font-weight: bold;*/
+            color: #fff;
+            
+        }
+        a:hover{
+            color: gold;
+            transition: 0.5s all ease;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        .header{
+            background-image: url('');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            /*position: fixed;  added */
+            top: 80px; /* added */    width: 100%; /* added */
+            z-index: 0; /* added */
+            /*background-attachment: fixed;*/
+        }
+        .table-container {
+            position: relative;
+            z-index: 1; /* ensure the table is on top of the overlay */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <nav>
+                <div class="table-container">
+                    <table class="table1">
+                        <tr class="tr1">
+                            <td class=" heading td1" style="width: 28%;"><div class="logo zoom">
+                                <a href="../RDESKTOP/DELIGHT.html">DELIGHT</a>
+                                </div>
+                            </td>
+                            <td class="text td1"><a href="../RDESKTOP/first_desktop.html">HOME</a></td>
+                            <td class="text td1"><a href="../ABCD/About.html">OUR STORY</a></td>
+                            <td class="text td1"><a href="../MENU/DDDMenu.html" target="_self">MENU</a></td>
+                            <td class="text td1"><a href="">YOUR ORDERS</a></td>
+                            <td class="text td1"><a href="">SERVICES</a></td>
+                            <td class="text td1"><a href="">CONTACT US</a></td>
+                        </tr>
+                    </table>
+                </div>  
+            </nav>
+
+
+
+            <script>
+                let zoomElements = document.querySelectorAll('.zoom');
+                let delay = 0;
+
+                zoomElements.forEach(element => {
+                    setTimeout(() => {
+                        element.classList.add('show');
+                    }, delay);
+                    delay += 200; // adjust the delay time as needed
+                });
+            </script>
+
+</body>
+</html>

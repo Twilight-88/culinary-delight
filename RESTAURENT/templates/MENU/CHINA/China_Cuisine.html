@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chienese Cuisine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='countries_style.css') }}">
+    <style>
+
+        .heading{
+            color:antiquewhite;
+
+        }
+        .paragraph{
+            color:antiquewhite;
+        }
+
+        .table1{
+            color: antiquewhite;
+
+        }
+        .table2{
+            color: antiquewhite;
+
+            border: 1px solid white;
+        }
+
+        /*For vega nd nono veg */
+        .th1{
+            color: antiquewhite;
+            
+        }
+        /*for veg table*/
+        th{
+            color: rgb(114, 42, 8);
+            
+        }
+
+        /*VEG and NON-veg Button like tables*/
+        .rounded-rectangle{
+            border: 1px solid white;
+        }
+
+        th.veg:hover {background-color: rgb(8, 114, 26)}
+        th.non-veg:hover {background-color: rgb(230, 65, 40)}
+        tr.row:hover{background-color: rgba(218, 171, 171, 0.884);
+                    color: rgb(120, 4, 4);}
+        a:link{
+            color: antiquewhite;
+        }
+        a:visited{
+            color: antiquewhite;
+        }
+        a:active{
+            color: antiquewhite;
+        }
+
+        .toppage{
+            background-color: rgb(5, 5, 5);
+            color: antiquewhite;
+        }
+
+        .toppage:hover{
+            background-color: antiquewhite;
+            color: rgb(5, 5, 5);
+        }
+
+    </style>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='IMAGES/Countries/China/red.jpeg') }}');">
+
+    <div id="overlay" class="overlay" onclick="closeImage()" style="display:none;"></div>
+
+    <div id="myDiv">
+        <h1 class="heading">Chienese Cuisine</h1>
+    </div>
+    <div>
+        <p class="paragraph">Chinese cuisine is renowned for its diversity and depth of flavor, reflecting the country's vast geography and rich cultural history. It incorporates a wide range of ingredients and cooking techniques, making each regional cuisine unique and exciting. From the bold, spicy flavors of Sichuan to the delicate, refined dishes of Cantonese cuisine, there's something for everyone to enjoy.</p>
+
+        <p class="paragraph">A key feature of Chinese cuisine is the balance of taste, texture, and color in every dish. Ingredients are carefully selected and prepared to create a harmonious blend of flavors. Whether it's the sweetness of a honey-glazed pork dish or the umami depth of a soy sauce-marinated tofu, each bite is designed to be a culinary delight.</p>
+        
+        <p class="paragraph">Staple foods like rice, noodles, and dumplings are central to Chinese meals and are often accompanied by a variety of vegetables, meats, and sauces. Popular dishes like fried rice, dumplings, and Peking duck showcase the versatility and creativity of Chinese chefs, who skillfully blend traditional recipes with modern influences.</p>
+        
+        <p class="paragraph">Dining in China is not just about the food; it's also about the experience. Meals are often communal, with dishes shared among family and friends, creating a sense of togetherness and community. The vibrant and bustling atmosphere of a Chinese banquet, with its array of delicious dishes and lively conversation, is a testament to the importance of food in Chinese culture.</p>
+        
+    </div>
+
+    <div>
+        <table class="table1">
+            <tr>
+                <th class="rounded-rectangle th1 veg" onclick="location.href='#veg-link'">VEG</th>
+                <th class="rounded-rectangle th1 non-veg" onclick="location.href='#non-veg-link'">NON-VEG</th>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="veg-link">VEG</h1>
+        <hr>
+    </div>
+
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite;">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/vm.jpeg') }}" alt="Vegetable Manchurian Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Vegetable Manchurian</h1>
+                    <p style="font-size: small;">(Crispy, deep-fried vegetable balls tossed in a spicy and tangy sauce.)</p>
+                </td>
+                <td>150/-</td>
+                <td>300/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/hn.jpeg') }}" alt="Hakka Noodles Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Hakka Noodles</h1>
+                    <p style="font-size: small;">(Stir-fried noodles with a mix of vegetables, seasoned with soy sauce and spices.)</p>
+                </td>
+                <td>120/-</td>
+                <td>240/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/vsr.jpeg') }}" alt="Vegetable Spring Rolls Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Vegetable Spring Rolls</h1>
+                    <p style="font-size: small;">(Crispy rolls filled with a mixture of finely chopped vegetables.)</p>
+                </td>
+                <td>100/-</td>
+                <td>200/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/gm.jpeg') }}" alt="Gobi Manchurian Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Gobi Manchurian</h1>
+                    <p style="font-size: small;">(Crispy, deep-fried cauliflower florets tossed in a spicy and tangy sauce.)</p>
+                </td>
+                <td>140/-</td>
+                <td>280/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/szv.jpeg') }}" alt="Szechuan Vegetable Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Szechuan Vegetable</h1>
+                    <p style="font-size: small;">(Stir-fried vegetables in a spicy Szechuan sauce with a hint of garlic and chili.)</p>
+                </td>
+                <td>130/-</td>
+                <td>260/-</td>
+            </tr>
+        </table>
+    </div>
+    
+
+
+    <!--Non-Veg Table -->
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="non-veg-link">NON-VEG</h1>
+        <hr>
+    </div>
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite;">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/kpc.jpeg') }}" alt="Kung Pao Chicken Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Kung Pao Chicken</h1>
+                    <p style="font-size: small;">(Diced chicken cooked with peanuts, vegetables, and chili peppers in a savory sauce.)</p>
+                </td>
+                <td>200/-</td>
+                <td>400/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/ssp.jpeg') }}" alt="Sweet and Sour Pork Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Sweet and Sour Pork</h1>
+                    <p style="font-size: small;">(Tender pork pieces cooked in a sweet and tangy sauce with pineapple chunks.)</p>
+                </td>
+                <td>220/-</td>
+                <td>440/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/cm.jpeg') }}" alt="Chicken Manchurian Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Chicken Manchurian</h1>
+                    <p style="font-size: small;">(Crispy, deep-fried chicken balls tossed in a spicy and tangy sauce.)</p>
+                </td>
+                <td>180/-</td>
+                <td>360/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/hc.jpeg') }}" alt="Hakka Chicken Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Hakka Chicken</h1>
+                    <p style="font-size: small;">(Stir-fried chicken with vegetables, seasoned with soy sauce and spices.)</p>
+                </td>
+                <td>160/-</td>
+                <td>320/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/China/cc.jpeg') }}" alt="Chilli Chicken Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Chilli Chicken</h1>
+                    <p style="font-size: small;">(Spicy chicken pieces cooked with chili peppers, garlic, and ginger in a savory sauce.)</p>
+                </td>
+                <td>190/-</td>
+                <td>380/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div style="position: fixed; bottom: 20px; right: 70px;">
+        <button class="toppage" onclick="scrollToTop()">&#8593;</button>
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            var overlay = document.getElementById('overlay');
+            if (img.classList.contains('enlarged')) {
+                img.classList.remove('enlarged');
+                overlay.style.display = 'none';
+            } else {
+                var enlargedImages = document.querySelectorAll('.enlarged');
+                enlargedImages.forEach(function(enlargedImg) {
+                    enlargedImg.classList.remove('enlarged');
+                });
+                img.classList.add('enlarged');
+                overlay.style.display = 'block';
+            }
+        }
+
+        function closeImage() {
+            var enlargedImages = document.querySelectorAll('.enlarged');
+            enlargedImages.forEach(function(enlargedImg) {
+                enlargedImg.classList.remove('enlarged');
+            });
+            document.getElementById('overlay').style.display = 'none';
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>

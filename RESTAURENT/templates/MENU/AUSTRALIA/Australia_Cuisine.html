@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australia Cuisine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='countries_style.css') }}">
+    <style>
+
+        .heading{
+            color:antiquewhite;
+
+        }
+        .paragraph{
+            color:antiquewhite;
+        }
+
+        .table1{
+            color: antiquewhite;
+
+        }
+        .table2{
+            color: antiquewhite;
+
+            border: 1px solid white;
+        }
+
+        /*For vega nd nono veg */
+        .th1{
+            color: antiquewhite;
+            
+        }
+        /*for veg table*/
+        th{
+            color: #001515;
+            
+        }
+
+        /*VEG and NON-veg Button like tables*/
+        .rounded-rectangle{
+            border: 1px solid white;
+        }
+
+        th.veg:hover {background-color: rgb(8, 114, 26)}
+        th.non-veg:hover {background-color: rgb(230, 65, 40)}
+        tr.row:hover{background-color: #90c7c7;
+                    color: #001515;}
+        a:link{
+            color: antiquewhite;
+        }
+        a:visited{
+            color: antiquewhite;
+        }
+        a:active{
+            color: antiquewhite;
+        }
+
+        .toppage{
+            background-color: rgb(5, 5, 5);
+            color: antiquewhite;
+        }
+
+        .toppage:hover{
+            background-color: antiquewhite;
+            color: rgb(5, 5, 5);
+        }
+
+    </style>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='IMAGES/Countries/Australia/turquoise.jpeg') }}');">
+
+    <div id="overlay" class="overlay" onclick="closeImage()" style="display:none;"></div>
+
+    <div id="myDiv">
+        <h1 class="heading">Australian Cuisine</h1>
+    </div>
+    <div>
+        <p class="paragraph">Australian cuisine is a reflection of the country's diverse cultural influences and abundant natural resources. It combines traditional British culinary practices with ingredients and flavors from the Mediterranean, Asian, and Indigenous Australian cultures. Fresh seafood, locally sourced meats, and an abundance of fruits and vegetables are staples in many Australian dishes.</p>
+    
+        <p class="paragraph">Barbecue, or "barbie" as Australians call it, is a popular cooking method, especially for meats like lamb, beef, and sausages. It's a social event where friends and family gather to enjoy grilled dishes paired with fresh salads and cold drinks. The laid-back and casual nature of barbecues embodies the Australian way of life.</p>
+    
+        <p class="paragraph">Australia is also known for its love of seafood. Dishes like fish and chips, barramundi fillets, and prawns are commonly enjoyed by locals and visitors alike. The coastal regions, in particular, offer a wide variety of fresh seafood that is often prepared simply to highlight its natural flavors.</p>
+    
+        <p class="paragraph">Desserts and sweets play a significant role in Australian cuisine as well. Pavlova, a meringue-based dessert topped with fresh fruits and whipped cream, is a beloved treat. Other popular desserts include lamingtons (sponge cake squares coated in chocolate and coconut) and Anzac biscuits, which are oat-based cookies with a rich history.</p>
+    </div>
+    
+
+    <div>
+        <table class="table1">
+            <tr>
+                <th class="rounded-rectangle th1 veg" onclick="location.href='#veg-link'">VEG</th>
+                <th class="rounded-rectangle th1 non-veg" onclick="location.href='#non-veg-link'">NON-VEG</th>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="veg-link">VEG</h1>
+        <hr>
+    </div>
+
+    <!--Veg Table -->
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite;">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/avocado_toast.jpeg') }}" alt="Avocado Toast Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Avocado Toast</h1>
+                    <p style="font-size: small;">(Toasted bread topped with mashed avocado, salt, pepper, and sometimes citrus juice.)</p>
+                </td>
+                <td>150/-</td>
+                <td>300/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/vegetable_skewers.jpeg') }}" alt="Vegetable Skewers Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Vegetable Skewers with Parsley and Cashew Pesto</h1>
+                    <p style="font-size: small;">(Skewers of capsicum, zucchini, and eggplant, served with parsley and cashew pesto.)</p>
+                </td>
+                <td>200/-</td>
+                <td>400/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/eggplant_parmigiana.jpeg') }}" alt="Eggplant Parmigiana Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Eggplant Parmigiana "Meatball" Subs</h1>
+                    <p style="font-size: small;">(Eggplant slices layered with marinara sauce and cheese, served in a sub roll.)</p>
+                </td>
+                <td>250/-</td>
+                <td>500/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/sticky_tofu_buns.jpeg') }}" alt="Sticky Tofu Buns Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Roasted Sticky Tofu Buns</h1>
+                    <p style="font-size: small;">(Tofu buns with a sticky, savory glaze.)</p>
+                </td>
+                <td>180/-</td>
+                <td>360/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/green_veggie_bibimbap.jpeg') }}" alt="Green Veggie Bibimbap Bowls Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Green Veggie Bibimbap Bowls</h1>
+                    <p style="font-size: small;">(A spicy veggie bowl topped with fried egg.)</p>
+                </td>
+                <td>220/-</td>
+                <td>440/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+    
+    <!--Non-Veg Table -->
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="non-veg-link">NON-VEG</h1>
+        <hr>
+    </div>
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite;">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/lamb_kebabs.jpeg') }}" alt="Lamb Kebabs Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Lamb Kebabs</h1>
+                    <p style="font-size: small;">(Marinated lamb cubes grilled to perfection.)</p>
+                </td>
+                <td>350/-</td>
+                <td>700/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/chicken_parmigiana.jpeg') }}" alt="Chicken Parmigiana Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Chicken Parmigiana</h1>
+                    <p style="font-size: small;">(Breaded chicken breast topped with marinara sauce and cheese, served with chips.)</p>
+                </td>
+                <td>400/-</td>
+                <td>800/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/meat_pies.jpeg') }}" alt="Aussie Meat Pies Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Aussie Meat Pies</h1>
+                    <p style="font-size: small;">(Pastry filled with minced meat and gravy.)</p>
+                </td>
+                <td>300/-</td>
+                <td>600/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/fish_and_chips.jpeg') }}" alt="Fish and Chips Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Fish and Chips</h1>
+                    <p style="font-size: small;">(Deep-fried battered fish served with thick-cut chips.)</p>
+                </td>
+                <td>450/-</td>
+                <td>900/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Australia/beef_burgers.jpeg') }}" alt="Beef Burgers Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Beef Burgers</h1>
+                    <p style="font-size: small;">(Juicy beef patties served in a soft bun with toppings like lettuce, tomato, and cheese.)</p>
+                </td>
+                <td>380/-</td>
+                <td>760/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+    <div style="position: fixed; bottom: 20px; right: 70px;">
+        <button class="toppage" onclick="scrollToTop()">&#8593;</button>
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            var overlay = document.getElementById('overlay');
+            if (img.classList.contains('enlarged')) {
+                img.classList.remove('enlarged');
+                overlay.style.display = 'none';
+            } else {
+                var enlargedImages = document.querySelectorAll('.enlarged');
+                enlargedImages.forEach(function(enlargedImg) {
+                    enlargedImg.classList.remove('enlarged');
+                });
+                img.classList.add('enlarged');
+                overlay.style.display = 'block';
+            }
+        }
+
+        function closeImage() {
+            var enlargedImages = document.querySelectorAll('.enlarged');
+            enlargedImages.forEach(function(enlargedImg) {
+                enlargedImg.classList.remove('enlarged');
+            });
+            document.getElementById('overlay').style.display = 'none';
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>

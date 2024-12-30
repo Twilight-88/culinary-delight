@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='booknowstyles.css') }}">
+    <style>
+        body{
+            background-image: url('{{ url_for('static', filename='login_bg.jpg') }}');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Change the color and opacity as needed */
+            z-index: -1; /* Ensure the overlay is behind the content */
+            margin: 0%;
+        }
+        body, html {
+            height: 100%;
+            margin:0;
+            padding:0;
+        }
+        .delight {
+            font-size: 90px;
+            font-weight: bold;
+            color: gold;
+            padding: 40px;
+            text-align: center;
+        }
+
+      .back-button 
+      { 
+        display: inline-block; 
+        margin-top: 20px; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        color: #fff; 
+        background-color: #007bff; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        text-decoration: none; 
+        } 
+        .back-button:hover 
+        { 
+            background-color: #0056b3; 
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Table</h1>
+        <p>Welcome to <bold style="color: blueviolet; font-size: 20px; font-weight: bold;">Delight!</bold> Please fill out the form below to reserve your table.</p>
+        <form action="{{ url_for('booknow') }}" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="guests">Number of Guests:</label>
+            <select id="guests" name="guests" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests" rows="4"></textarea>
+            
+            <button type="submit">Submit</button>
+            <br>
+        </form>
+        
+        <a href="{{ url_for('delight') }}" class="back-button">Back to Delight</a>
+
+        <p>We will confirm your reservation via email or SMS within 24 hours. For any inquiries, please contact us at (phone number) or (email address).</p>
+        
+        <h3>Cancellation Policy</h3>
+        <p>Please let us know at least 24 hours in advance if you need to cancel or modify your reservation.</p>
+        
+        <h3>Location & Hours</h3>
+        <p>Address: [Restaurant Address]</p>
+        <p>Hours: Monday-Sunday, 11:00 AM - 10:00 PM</p>
+        <div class="map">
+            <!-- Embed Google Maps iframe here -->
+        </div>
+    </div>
+</body>
+</html>
