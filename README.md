@@ -2,6 +2,8 @@
 
 ## Culinary Delight - Web Project
 
+### Youtube video url : https://youtu.be/Q_hYmA0mK8Y
+
 ### Overview
 Culinary Delight is a restaurant website that allows users to register, log in, explore various menus, reserve tables, and send messages. The website features a navigation bar containing sections such as Home, Our Story, Menu, Reservation, Services, and Contact Us. The Menu page includes dining options, drink menu, happy hours, and dessert menu, with specific country menus for India, Australia, Japan, Italy, France, Spain, Korea, and China.
 
