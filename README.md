@@ -65,6 +65,17 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
   <li><h5>Exiting SQLite Command Line</h5> </li>
   .exit
 </ul>
-  
+
+
+#### Additional Information
+<ul>
+  <li>**User Registration and Login:** The user registration process is straightforward. Users can sign up by providing their name, email, and password. After registering, they can log in using their credentials. This feature ensures that users have a personalized experience on the website, such as viewing their reservation history and sending messages.<li>
+
+  <li>**Table Reservation System:** The table reservation system allows users to select the date, time, and number of guests for their reservation. Once submitted, the system checks for availability and confirms the reservation. This feature is integrated with the back-end to manage table availability and ensure a smooth booking process.</li>
+
+  <li>**Challenges Faced:** Developing a user-friendly and responsive design was one of the main challenges. Ensuring that the website works seamlessly across various devices required extensive testing and adjustments. Another challenge was integrating the various country-specific menus, which involved managing multiple datasets and ensuring that the correct menu is displayed based on the user's selection.</li>
+
+  <li>**Country-Specific Menus:** The website offers distinct menus for different countries. This feature is managed by storing the menu data in SQLite and dynamically loading the relevant menu based on the user's selection. This allows users to explore a variety of dining options tailored to their preferences and regional tastes.</li>
+</ul>
 
 
