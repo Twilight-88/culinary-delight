@@ -9,12 +9,23 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
 
 ### Table of Contents
 <ul>
+  <li>Project Architecture</li>
   <li>Features</li>
   <li>Technologies Used</li>
   <li>Setup and Installation</li>
   <li>Usage</li>
   <li>Screenshots</li>
 </ul>
+
+### Project Architecture
+culinary-delight/
+|_RESTAURENT
+| |_static
+| |_templates
+| |_app.py
+| |_requirements.txt
+| |_restaurant.db
+|_README.md
 
 ### Features
 <ul>
