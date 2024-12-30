@@ -50,19 +50,31 @@ culinary-delight/
 #### Setup and Installation
 <ul>
   <li><h5>Clone the Repository:</h5> </li>
-  git clone https://github.com/Twilight-88/culinary-delight.git <br>
+  
+  ```
+  git clone https://github.com/Twilight-88/culinary-delight.git 
   cd culinary-delight
+  ```
 
   <li><h5>Create a Virtual Environment:</h5> </li>
+
+  ```
   python -m venv restaurant_env <br>
   source restaurant_env/bin/activate  # For Linux/macOS <br>
   restaurant_env\Scripts\activate  # For Windows <br>
+  ```
 
   <li><h5>Install Dependencies:</h5> </li>
+  
+  ```
   pip install -r requirements.txt
+  ```
 
   <li><h5>Install Dependencies:</h5> </li>
+
+  ```
   python app.py
+  ```
 
 #### Notes
   Ensure you have Python and pip installed.
