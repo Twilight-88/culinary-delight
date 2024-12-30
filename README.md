@@ -18,6 +18,7 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
 </ul>
 
 ### Project Architecture
+```
 culinary-delight/
 |_RESTAURENT
 | |_static
@@ -26,7 +27,7 @@ culinary-delight/
 | |_requirements.txt
 | |_restaurant.db
 |_README.md
-
+```
 ### Features
 <ul>
   <li><bold>User Registration and Login:</bold> Users can create an account and log in to access personalized features.</li>
