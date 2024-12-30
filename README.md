@@ -70,15 +70,19 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
 #### Additional Information
 <ul>
   <li>**User Registration and Login:** The user registration process is straightforward. Users can sign up by providing their name, email, and password. After registering, they can log in using their credentials. This feature ensures that users have a personalized experience on the website, such as viewing their reservation history and sending messages.<li>
+    
   ![Screenshot_31-12-2024_21746_127 0 0 1](https://github.com/user-attachments/assets/90e21550-1db1-46d5-b3b9-8d5b407dca8d)
 
   <li>**Table Reservation System:** The table reservation system allows users to select the date, time, and number of guests for their reservation. Once submitted, the system checks for availability and confirms the reservation. This feature is integrated with the back-end to manage table availability and ensure a smooth booking process.</li>
+  
   ![Screenshot 2024-12-31 022216](https://github.com/user-attachments/assets/e4e297b5-4fa7-40c9-b7ed-e8131b7b9866)
 
   <li>**Challenges Faced:** Developing a user-friendly and responsive design was one of the main challenges. Ensuring that the website works seamlessly across various devices required extensive testing and adjustments. Another challenge was integrating the various country-specific menus, which involved managing multiple datasets and ensuring that the correct menu is displayed based on the user's selection.</li>
+  
   ![Screenshot 2024-12-31 022701](https://github.com/user-attachments/assets/2ced6de8-397e-417e-9b53-2b86ce89dc97)
 
   <li>**Country-Specific Menus:** The website offers distinct menus for different countries. This feature is managed by storing the menu data in SQLite and dynamically loading the relevant menu based on the user's selection. This allows users to explore a variety of dining options tailored to their preferences and regional tastes.</li>
+  
   ![Screenshot 2024-12-31 022837](https://github.com/user-attachments/assets/af5546f9-ec67-4505-8a20-214d102e2ba5)
 </ul>
 
