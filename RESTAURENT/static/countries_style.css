@@ -1,0 +1,139 @@
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+
+.heading{
+    font-size: 50px;
+    font-family: 'Lucida Calligraphy';
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+.paragraph{
+    font-weight: bold;
+    font-size: large;
+    margin: 40px
+}
+
+.table1{
+    width:90%;
+    height: 2%;
+    text-align: center;
+    margin: 5%;
+
+}
+.table2{
+    width:90%;
+    border-collapse: collapse;
+    height: 2%;
+    text-align: center;
+    margin: 5%;
+}
+/*To make VEG and NON-VEG CELLS just like a BUTTON*/
+.table1 th{
+    cursor: pointer;
+    /*padding: 10px;*/
+
+}
+/*For vega nd nono veg */
+.th1{
+    width: 50%;
+    padding: 10px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+/*for veg table*/
+th{
+    width: 50%;
+    padding: 10px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+td{
+    max-height: 25%;
+    border: 10px solid transparent;
+}
+
+/*VEG and NON-veg Button like tables*/
+.rounded-rectangle{
+    border-radius: 10px;
+}
+a:link{
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited{
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active{
+    background-color: transparent;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10%;
+
+}
+.nsml{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*small medium large to appear on each row when the curser moves on it */
+
+
+/*Images slide*/
+/* Slideshow container */
+.toppage{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5%;
+    margin-left: 93%;
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.table2 img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
