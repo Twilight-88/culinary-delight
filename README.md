@@ -56,6 +56,8 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
   Ensure you have Python and pip installed.
   Access the website at http://127.0.0.1:5000/
 
+  ![Screenshot 2024-12-31 024240](https://github.com/user-attachments/assets/90fd92ff-124d-463e-abc0-82b41b252dad)
+
 
 #### Screenshot
 <p>The below page will open for this url (http://127.0.0.1:5000/) </p>
