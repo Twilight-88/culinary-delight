@@ -28,6 +28,39 @@ culinary-delight/
 | |_restaurant.db
 |_README.md
 ```
+<ul>
+  <li>**culinary-delight/:** The root directory of your project.</li>
+  
+  <li>RESTAURENT/: The main directory containing all the essential files and subdirectories for your project.</li>
+  
+  <li>static/:<br>
+  This directory holds all the static files such as CSS, JavaScript, and images. <br>
+  Example contents: CSS files for styling your web pages, JavaScript files for client-side scripts, and images used on the site.</li>
+
+  <li>templates/: <br>
+  This directory contains all the HTML templates for rendering the web pages.<br>
+
+  Example contents: HTML files like index.html, menu.html, reservation.html, etc., which define the structure and layout of your web pages.</li>
+
+  <li>app.py:<br>
+  The main Python file for your Flask application.<br>
+  This file includes the application setup, routes, and any backend logic required for handling requests and responses.</li>
+
+  <li>requirements.txt:<br>
+A text file listing all the dependencies and libraries required for your project.<br>
+This file is used to install all the necessary packages using pip.
+  </li>
+
+  <li>restaurant.db: <br>
+  The SQLite database file storing all the data for your application.<br>
+  This includes user information, menu details, reservations, and any other data relevant to your project.</li>
+
+  <li>README.md: <br>
+  A markdown file providing a detailed overview of your project.<br>
+  This file includes the project description, setup instructions, usage guidelines, features, technologies used, and any additional information to help users understand and work with your project.
+  </li>
+</ul>
+
 ### Features
 <ul>
   <li><bold>User Registration and Login:</bold> Users can create an account and log in to access personalized features.</li>
