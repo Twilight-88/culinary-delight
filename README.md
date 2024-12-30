@@ -70,6 +70,7 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
 #### Additional Information
 <ul>
   <li>**User Registration and Login:** The user registration process is straightforward. Users can sign up by providing their name, email, and password. After registering, they can log in using their credentials. This feature ensures that users have a personalized experience on the website, such as viewing their reservation history and sending messages.<li>
+  ![Screenshot_31-12-2024_21746_127 0 0 1](https://github.com/user-attachments/assets/90e21550-1db1-46d5-b3b9-8d5b407dca8d)
 
   <li>**Table Reservation System:** The table reservation system allows users to select the date, time, and number of guests for their reservation. Once submitted, the system checks for availability and confirms the reservation. This feature is integrated with the back-end to manage table availability and ensure a smooth booking process.</li>
 
