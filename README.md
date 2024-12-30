@@ -1,8 +1,11 @@
-# Culinary Delight - Web Project
+# culinary-delight
 
-#### Youtube demo: https://youtu.be/Q_hYmA0mK8Y
+## Culinary Delight - Web Project
 
-#### Description: Culinary Delight is a user-friendly restaurant website that allows users to register, log in, explore various menus, reserve tables, and send messages. The website is developed using HTML, CSS, JavaScript, Python, Flask, SQLite, and other additional libraries and tools. It features a navigation bar containing sections such as Home, Our Story, Menu, Reservation, Services, and Contact Us. The Menu page includes dining options, drink menu, happy hours, and dessert menu.
+### Youtube video url : https://youtu.be/Q_hYmA0mK8Y
+
+### Overview
+Culinary Delight is a restaurant website that allows users to register, log in, explore various menus, reserve tables, and send messages. The website features a navigation bar containing sections such as Home, Our Story, Menu, Reservation, Services, and Contact Us. The Menu page includes dining options, drink menu, happy hours, and dessert menu, with specific country menus for India, Australia, Japan, Italy, France, Spain, Korea, and China.
 
 ### Table of Contents
 <ul>
@@ -11,17 +14,16 @@
   <li>Setup and Installation</li>
   <li>Usage</li>
   <li>Screenshots</li>
-  <li>Additional Information</li>
 </ul>
 
 ### Features
 <ul>
-  <li>**User Registration and Login:** Users can create an account and log in to access personalized features.</li>
-  <li>**Navigation Bar:** Home, Our Story, Menu, Reservation, Services, Contact Us.</li>
-  <li>**Table Reservation:** Users can reserve a table through the Reservation section.</li>
-  <li>**Message Contact:** Users can send messages through the Contact Us section.</li>
-  <li>**Menu Sections:** Includes dining menu, drink menu, happy hours, and dessert menu.</li>
-  <li>**Country-Specific Menus:** Separate menus for India, Australia, Japan, Italy, France, Spain, Korea, and China.</li>
+  <li><bold>User Registration and Login:</bold> Users can create an account and log in to access personalized features.</li>
+  <li><bold>Navigation Bar:</bold> Home, Our Story, Menu, Reservation, Services, Contact Us.</li>
+  <li><bold>Table Reservation:</bold> Users can reserve a table through the Reservation section.</li>
+  <li><bold>Message Contact:</bold> Users can send messages through the Contact Us section.</li>
+  <li><bold>Menu Sections:</bold> Includes dining menu, drink menu, happy hours, and dessert menu.</li>
+  <li><bold>Country-Specific Menus:</bold> Separate menus for India, Australia, Japan, Italy, France, Spain, Korea, and China.</li>
 </ul>
 
 
@@ -64,22 +66,24 @@
   .exit
 </ul>
 
+
 #### Additional Information
 <ul>
-  <br><li>**User Registration and Login:** The user registration process is straightforward. Users can sign up by providing their name, email, and password. After registering, they can log in using their credentials. This feature ensures that users have a personalized experience on the website, such as viewing their reservation history and sending messages.<li><br>
-
+  <li>**User Registration and Login:** The user registration process is straightforward. Users can sign up by providing their name, email, and password. After registering, they can log in using their credentials. This feature ensures that users have a personalized experience on the website, such as viewing their reservation history and sending messages.<li>
+    
   ![Screenshot_31-12-2024_21746_127 0 0 1](https://github.com/user-attachments/assets/90e21550-1db1-46d5-b3b9-8d5b407dca8d)
 
-  <br><li>**Table Reservation System:** The table reservation system allows users to select the date, time, and number of guests for their reservation. Once submitted, the system checks for availability and confirms the reservation. This feature is integrated with the back-end to manage table availability and ensure a smooth booking process.</li><br>
-
+  <li>**Table Reservation System:** The table reservation system allows users to select the date, time, and number of guests for their reservation. Once submitted, the system checks for availability and confirms the reservation. This feature is integrated with the back-end to manage table availability and ensure a smooth booking process.</li>
+  
   ![Screenshot 2024-12-31 022216](https://github.com/user-attachments/assets/e4e297b5-4fa7-40c9-b7ed-e8131b7b9866)
 
-  <br><li>**Challenges Faced:** Developing a user-friendly and responsive design was one of the main challenges. Ensuring that the website works seamlessly across various devices required extensive testing and adjustments. Another challenge was integrating the various country-specific menus, which involved managing multiple datasets and ensuring that the correct menu is displayed based on the user's selection.</li><br>
-
+  <li>**Challenges Faced:** Developing a user-friendly and responsive design was one of the main challenges. Ensuring that the website works seamlessly across various devices required extensive testing and adjustments. Another challenge was integrating the various country-specific menus, which involved managing multiple datasets and ensuring that the correct menu is displayed based on the user's selection.</li>
+  
   ![Screenshot 2024-12-31 022701](https://github.com/user-attachments/assets/2ced6de8-397e-417e-9b53-2b86ce89dc97)
 
-  <br><li>**Country-Specific Menus:** The website offers distinct menus for different countries. This feature is managed by storing the menu data in SQLite and dynamically loading the relevant menu based on the user's selection. This allows users to explore a variety of dining options tailored to their preferences and regional tastes.</li><br>
-
+  <li>**Country-Specific Menus:** The website offers distinct menus for different countries. This feature is managed by storing the menu data in SQLite and dynamically loading the relevant menu based on the user's selection. This allows users to explore a variety of dining options tailored to their preferences and regional tastes.</li>
+  
   ![Screenshot 2024-12-31 022837](https://github.com/user-attachments/assets/af5546f9-ec67-4505-8a20-214d102e2ba5)
 </ul>
+
 
