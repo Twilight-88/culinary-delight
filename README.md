@@ -76,6 +76,7 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
   ![Screenshot 2024-12-31 022216](https://github.com/user-attachments/assets/e4e297b5-4fa7-40c9-b7ed-e8131b7b9866)
 
   <li>**Challenges Faced:** Developing a user-friendly and responsive design was one of the main challenges. Ensuring that the website works seamlessly across various devices required extensive testing and adjustments. Another challenge was integrating the various country-specific menus, which involved managing multiple datasets and ensuring that the correct menu is displayed based on the user's selection.</li>
+  ![Screenshot 2024-12-31 022701](https://github.com/user-attachments/assets/2ced6de8-397e-417e-9b53-2b86ce89dc97)
 
   <li>**Country-Specific Menus:** The website offers distinct menus for different countries. This feature is managed by storing the menu data in SQLite and dynamically loading the relevant menu based on the user's selection. This allows users to explore a variety of dining options tailored to their preferences and regional tastes.</li>
 </ul>
