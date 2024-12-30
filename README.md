@@ -6,13 +6,15 @@
 Culinary Delight is a restaurant website that allows users to register, log in, explore various menus, reserve tables, and send messages. The website features a navigation bar containing sections such as Home, Our Story, Menu, Reservation, Services, and Contact Us. The Menu page includes dining options, drink menu, happy hours, and dessert menu, with specific country menus for India, Australia, Japan, Italy, France, Spain, Korea, and China.
 
 ### Table of Contents
-<p>Features</p>
-Technologies Used <br> 
-Setup and Installation <br>
-Usage <br>
-Screenshots <br>
+<ul>
+  <li>Features</li>
+  <li>Technologies Used</li>
+  <li>Setup and Installation</li>
+  <li>Usage</li>
+  <li>Screenshots</li>
+</ul>
 
-### <p id="feature">Features</p>
+### Features
 <ul>
   <li><bold>User Registration and Login:</bold> Users can create an account and log in to access personalized features.</li>
   <li><bold>Navigation Bar:</bold> Home, Our Story, Menu, Reservation, Services, Contact Us.</li>
