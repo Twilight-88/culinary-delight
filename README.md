@@ -36,7 +36,7 @@ Culinary Delight is a restaurant website that allows users to register, log in, 
 #### Setup and Installation
 <ul>
   <li><h5>Clone the Repository:</h5> </li>
-  git clone https://github.com/your-username/culinary-delight.git <br>
+  git clone https://github.com/Twilight-88/culinary-delight.git <br>
   cd culinary-delight
 
   <li><h5>Create a Virtual Environment:</h5> </li>
