@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Cuisine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='countries_style.css') }}">
+    <style>
+
+        .heading{
+            color:antiquewhite;
+
+        }
+        .paragraph{
+            color:antiquewhite;
+        }
+
+        .table1{
+            color: antiquewhite;
+
+        }
+        .table2{
+            color: antiquewhite;
+
+            border: 1px solid white;
+        }
+
+        /*For vega nd nono veg */
+        .th1{
+            color: antiquewhite;
+            
+        }
+        /*for veg table*/
+        th{
+            color: rgb(114, 42, 8);
+            
+        }
+
+        /*VEG and NON-veg Button like tables*/
+        .rounded-rectangle{
+            border: 1px solid white;
+        }
+
+        th.veg:hover {background-color: rgb(8, 114, 26)}
+        th.non-veg:hover {background-color: rgb(230, 65, 40)}
+        tr.row:hover{background-color: rgba(218, 171, 171, 0.884);
+                    color: rgb(120, 4, 4);}
+        a:link{
+            color: antiquewhite;
+        }
+        a:visited{
+            color: antiquewhite;
+        }
+        a:active{
+            color: antiquewhite;
+        }
+
+        .toppage{
+            background-color: rgb(5, 5, 5);
+            color: antiquewhite;
+        }
+
+        .toppage:hover{
+            background-color: antiquewhite;
+            color: rgb(5, 5, 5);
+        }
+
+
+    </style>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='IMAGES/Countries/Spain/red1.jpeg') }}');">
+
+    <div id="overlay" class="overlay" onclick="closeImage()" style="display:none;"></div>
+
+    <div id="myDiv">
+        <h1 class="heading">Spanish Cuisine</h1>
+    </div>
+    <div>
+        <p class="paragraph">Spanish cuisine is a celebration of vibrant flavors and fresh ingredients, deeply rooted in regional traditions. Known for its diverse tapas, Spain offers an array of small dishes like Patatas Bravas and Gambas al Ajillo that encourage social dining.</p>
+
+        <p class="paragraph">One of the most iconic Spanish dishes is Paella, a saffron-infused rice dish traditionally cooked with seafood, chicken, or rabbit. This dish exemplifies the rich culinary heritage of Spain and its passion for communal meals.</p>
+        
+        <p class="paragraph">The cuisine varies significantly across regions, with coastal areas specializing in fresh seafood and inland regions known for hearty stews and roasted meats. Dishes like Gazpacho and Jamón Ibérico showcase the diversity and richness of Spanish culinary traditions.</p>
+        
+        <p class="paragraph">At our restaurant, we bring the essence of Spain to your table, offering classic dishes crafted with authentic ingredients. Join us for a culinary journey through the flavors of Spain. ¡Buen provecho!</p>
+        
+    </div>
+
+    <div>
+        <table class="table1">
+            <tr>
+                <th class="rounded-rectangle th1 veg" onclick="location.href='#veg-link'">VEG </th>
+                <th class="rounded-rectangle th1 non-veg" onclick="location.href='#non-veg-link'">NON-VEG </th>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="veg-link">VEG</h1>
+        <hr>
+    </div>
+    <!--Veg Briyani table -->
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite; ">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/pb.jpeg') }}"
+                    alt="Patatas Bravas Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Patatas Bravas</h1>
+                    <p style="font-size: small;">(Fried or roasted potato cubes topped with a spicy tomato sauce and garlic aioli.)
+                </td>
+                <td>150/-</td>
+                <td>300/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/e.jpeg') }}"
+                    alt="Escalivada Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Escalivada</h1>
+                    <p style="font-size: small;">(Grilled vegetables such as eggplant, bell peppers, and onions, seasoned and served as an appetizer.)
+                    </p>
+                </td>
+                <td>200/-</td>
+                <td>400/-</td>
+            </tr> 
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/p.jpeg') }}"
+                    alt="Pisto Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Pisto</h1>
+                    <p style="font-size: small;">(A vegetable stew made with tomatoes, onions, bell peppers, and zucchini, similar to ratatouille.)
+                    </p>
+                </td>
+                <td>250/-</td>
+                <td>500/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/te.jpeg') }}"
+                    alt="Tortilla Española Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Tortilla Española</h1>
+                    <p style="font-size: small;">(A Spanish omelette made with potatoes, eggs, and onions.)
+                    </p>
+                </td>
+                <td>200/-</td>
+                <td>400/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/saa.jpeg') }} "
+                    alt="Setas al Ajillo Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Setas al Ajillo</h1>
+                    <p style="font-size: small;">(Mushrooms sautéed in olive oil with garlic, often served with white wine and parsley.)
+                    </p>
+                </td>
+                <td>150/-</td>
+                <td>300/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!--Non-Veg Table -->
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="non-veg-link">NON-VEG</h1>
+        <hr>
+    </div>
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite; ">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/np.jpeg') }}"
+                    alt="Paella Image"
+                    onclick="enlargeImage(this)"
+
+                >
+                </td>
+                <td>
+                    <h1>Paella</h1>
+                    <p style="font-size: small;">(A famous Spanish rice dish cooked with saffron, chicken, rabbit, and various seafood.)</p>
+                </td>
+                <td>600/-</td>
+                <td>1200/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/g.jpeg') }}"
+                    alt="Gazpacho Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Gazpacho</h1>
+                    <p style="font-size: small;">(A cold tomato-based soup made with cucumbers, bell peppers, onions, and garlic.)</p>
+                </td>
+                <td>200/-</td>
+                <td>400/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/clp.jpeg') }}"
+                    alt="Chorizo a la Plancha Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Chorizo a la Plancha</h1>
+                    <p style="font-size: small;">(Grilled spicy sausage made with pork and seasoned with paprika.)</p>
+                </td>
+                <td>250/-</td>
+                <td>500/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/eds.jpeg') }}"
+                    alt="Espetos de Sardinas Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                    <h1>Espetos de Sardinas</h1>
+                    <p style="font-size: small;">(Grilled whole sardines skewered on a stick and cooked over an open flame.)</p>
+                </td>
+                <td>300/-</td>
+                <td>600/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img
+                    src="{{ url_for('static', filename='IMAGES/Countries/Spain/ji.jpeg') }}"
+                    alt="Jamón Ibérico Image"
+                    onclick="enlargeImage(this)"
+                >
+                </td>
+                <td>
+                        <h1>Jamón Ibérico</h1>
+                        <p style="font-size: small;">(A type of cured ham made from the Iberian pig, known for its rich flavor and marbled texture.)</p>
+                </td>
+                <td>500/-</td>
+                <td>1000/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div style="position: fixed; bottom: 20px; right: 70px;">
+        <button class="toppage" onclick="scrollToTop()">&#8593;</button>
+    </div>    
+    
+    
+    <script>
+        function enlargeImage(img) {
+            var overlay = document.getElementById('overlay');
+            if (img.classList.contains('enlarged')) {
+                img.classList.remove('enlarged');
+                overlay.style.display = 'none';
+            } else {
+                var enlargedImages = document.querySelectorAll('.enlarged');
+                enlargedImages.forEach(function(enlargedImg) {
+                    enlargedImg.classList.remove('enlarged');
+                });
+                img.classList.add('enlarged');
+                overlay.style.display = 'block';
+            }
+        }
+
+        function closeImage() {
+            var enlargedImages = document.querySelectorAll('.enlarged');
+            enlargedImages.forEach(function(enlargedImg) {
+                enlargedImg.classList.remove('enlarged');
+            });
+            document.getElementById('overlay').style.display = 'none';
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
