@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Logout Confirmation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        h2 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button, a.cancel-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #d62828;
+        }
+        a.cancel-btn {
+            background-color: #adb5bd;
+            color: #333;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a.cancel-btn:hover {
+            background-color: #868e96;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Are you sure you want to logout?</h2>
+        <form method="post" action="{{ url_for('logout') }}">
+            <button type="submit">Yes, Logout</button>
+            <a href="{{ url_for('home') }}" class="cancel-btn">No, Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

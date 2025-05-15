@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="styled.css">
+    <style>
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* ensure it's on top of other elements */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .zoom {
+            transform: scale(0);
+            transition: transform 1.0s ease-in-out;
+        }
+        
+        .zoom.show {
+            transform: scale(1);
+        }
+
+        .table1 {
+            border-collapse: collapse;
+            padding: 0;
+            border-spacing: 0;
+            width: 100%;
+            background-color: black;
+        }
+
+        table, tr, td {
+            border: none;
+        }
+
+        .tr1 {
+            height: 80px;
+            width: 100%;
+        }
+
+        .td1 {
+            width: 12%;
+            height: 30px;
+        }
+
+        .heading {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+
+        .heading a {
+            color: red;
+        }
+
+        .text {
+            text-decoration: none;
+            text-align: center;
+            font-size: 17px;
+            color: #fff;
+        }
+
+        a:hover {
+            color: gold;
+            transition: 0.5s all ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .header {
+            background-image: url('');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .table-container {
+            position: relative;
+            z-index: 1; /* ensure the table is on top of the overlay */
+        }
+
+        /* Body */
+        table, tr, td, th {
+            margin: 0;
+            border-collapse: collapse;
+        }
+
+        .toppage {
+            background-color: rgb(66, 66, 3);
+            color: red;
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5%;
+            margin-left: 93%;
+            border-radius: 100px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px; /* To vertically center the text */
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Hidden by default */
+            z-index: 1000; /* Ensure it's on top of other elements */
+        }
+
+        .toppage:hover {
+            background-color: red; /* Change background on hover */
+            color: rgb(66, 66, 3);
+        }
+
+        .hero-image {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .map {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-form {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-media {
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        form {
+            color: white;
+        }
+
+        button {
+            background: none;
+            border: 2px solid red;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 6px;
+            transition: 0.5s all ease;
+            background: black;
+        }
+
+        button:hover {
+            background: black;
+            color: red;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            animation: fadeInOut 4s ease-in-out;
+        }
+        .alert-success {
+            background-color: #4CAF50;
+        }
+        .alert-danger {
+            background-color: #f44336;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(-20px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <nav>
+                <div class="table-container">
+                    <table class="table1">
+                        <tr class="tr1">
+                            <td class="heading td1" style="width: 28%;">
+                                <div class="logo zoom">
+                                    <a href="{{ url_for('delight') }}">DELIGHT</a>
+                                </div>
+                            </td>
+                            <td class="text td1"><a href="{{ url_for('delight') }}">HOME</a></td>
+                            <td class="text td1"><a href="{{ url_for('about') }}">OUR STORY</a></td>
+                            <td class="text td1"><a href="{{ url_for('menu') }}" target="_self">MENU</a></td>
+                            <td class="text td1"><a href="{{ url_for('reserve') }}">RESERVATION</a></td>
+                            <td class="text td1"><a href="{{ url_for('service') }}">SERVICES</a></td>
+                            <td class="text td1"><a href="{{ url_for('contact') }}">CONTACT US</a></td>
+                            <td class="text td1"><a href="{{ url_for('logout') }}">LOGOUT</a></td>
+                        </tr>
+                    </table>
+                </div>  
+            </nav>
+
+            <div class="contact-info" style="color: white; font-size: 18px; margin-top: 80px;">
+                <h2 style="font-size: 26px; font-weight: bold; color: red;">Contact Us</h2>
+                <p>123 Main Street, City, Country</p>
+                <p><span style="font-size: 20px; font-weight: bold;">Phone:</span> +123 456 7890</p>
+                <p><span style="font-size: 20px; font-weight: bold;">Email:</span> info@restaurant.com</p>
+                <p><span style="font-size: 20px; font-weight: bold;">Business Hours:</span> 9 AM - 9 PM</p>
+            </div>
+
+            <div class="contact-form" >
+                <h2 style="color: red; font-size: 26px; font-weight: bold;">Send Us a Message</h2>
+                <form action="{{ url_for('contact') }}" method="POST" style="max-width: 600px; margin: auto; padding: 20px; background-color:none; border-radius: 10px;">
+                    <div style="margin-bottom: 15px;">
+                        <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
+                        <textarea id="message" name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 150px;"></textarea>
+                    </div>
+                    <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                        Send
+                    </button>
+                </form>
+                
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} mt-3">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+            </div>
+
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=123+Main+Street,+City,+Country&output=embed" width="600" height="450" frameborder="0" style="border:2px solid red;" allowfullscreen></iframe>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/restaurant" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/restaurant" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com/restaurant" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+            </div>
+            <footer>
+                <p>&copy; 2024 Delight. All rights reserved.</p>
+            </footer>
+
+            <!-- Scroll to Top Button -->
+            <div class="toppage" onclick="scrollToTop()">
+                &uarr;
+            </div>
+
+            <script>
+                // Scroll to Top function
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth' // Smooth scrolling
+                    });
+                }
+
+                // Show or hide the scroll to top button
+                window.addEventListener('scroll', () => {
+                    const scrollButton = document.querySelector('.toppage');
+                    if (window.scrollY > 300) { // Show button after scrolling 300px
+                        scrollButton.style.display = 'block';
+                    } else {
+                        scrollButton.style.display = 'none';
+                    }
+                });
+
+                // Zoom effect for logo
+                let zoomElements = document.querySelectorAll('.zoom');
+                let delay = 0;
+
+                zoomElements.forEach(element => {
+                    setTimeout(() => {
+                        element.classList.add('show');
+                    }, delay);
+                    delay += 200; // adjust the delay time as needed
+                });
+
+                setTimeout(() => {
+                    const alertBox = document.querySelector('.alert');
+                    if (alertBox) {
+                    alertBox.style.display = 'none';
+                    }
+                }, 4000); // matches animation duration of 4s
+            </script>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELIGHT</title>
+
+    <style>
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* ensure it's on top of other elements */
+        }
+        .zoom {
+            transform: scale(0);
+            transition: transform 1.0s ease-in-out;
+        }
+        
+       .zoom.show {
+            transform: scale(1);
+        }
+        img{
+            filter: brightness(0.5);
+        }
+
+        table{
+            border-collapse: collapse;
+            padding: 0;
+            border-spacing: 0;
+            width: 100%;
+            background-color: none;
+        }
+        table,tr,td{
+            border: none;
+        }
+        tr{
+            height: 80px;
+            width: 100%;
+        }
+        td{
+            width: 12%;
+            height: 30px;
+        }
+
+        .heading{
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+        .heading a{
+            color: gold;
+        }
+        .text{
+            text-decoration: none;
+            text-align: center;
+            font-size: 17px;
+            /*font-weight: bold;*/
+            color: #fff;
+            
+        }
+        a:hover{
+            color: gold;
+            transition: 0.5s all ease;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .main{
+            width: 100%;
+        }
+
+        .header{
+            background-image: url('r1.jpg');  /*url_for('static', filename='r1.jpg')*/
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            /*position: fixed;  added */
+            top: 80px; /* added */    width: 100%; /* added */
+            z-index: 0; /* added */
+            /*background-attachment: fixed;*/
+        }
+        .content{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+            text-align: center;
+            /*background: rgba(0,0,0,0.5);*/
+        }
+
+        .content h1 {
+            font-size: 50px;
+        }
+
+        .content p{
+            font-size: 20px;
+            padding: 0px 50px;
+        }
+
+        button{
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 6px;
+            transition: 0.5s all ease;
+        }
+
+        button:hover{
+            background: black;
+            color: red;
+        }
+
+        .overlay{
+            background: rgba(0,0,0,0.6);
+            height: 100vh;
+            position: absolute; /* added */
+            top: 0; /* added */
+            width: 100%; /* added */
+            z-index: 0; /* added */
+        }
+
+        .table-container {
+            position: relative;
+            z-index: 1; /* ensure the table is on top of the overlay */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div class="header" style="background-image: url('{{ url_for('static', filename='r1.jpg') }}');">
+                    <nav>
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <td class=" heading" style="width: 28%;"><div class="logo zoom">
+                                        <a href="{{ url_for('delight') }}">DELIGHT</a>
+                                        </div>
+                                    </td>
+                                    <td class="text"><a href="{{ url_for('delight') }}">HOME</a></td>
+                                    <td class="text"><a href="{{ url_for('about') }}">OUR STORY</a></td>
+                                    <td class="text"><a href="{{ url_for('menu') }}">MENU</a></td>
+                                    <!--<td class="text"><a href="MENU/DDDMenu.html" target="_self">MENU</a></td>-->
+                                    <td class="text"><a href="{{ url_for('reserve') }}">RESERVATION</a></td>
+                                    <td class="text"><a href="{{ url_for('service') }}">SERVICES</a></td>
+                                    <td class="text"><a href="{{ url_for('contact') }}">CONTACT US</a></td>
+                                    <td class="text"><a href="{{ url_for('logout') }}">LOGOUT</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </nav>
+                    <div class="overlay">
+                        <div class="content">
+                            <h1 class="zoom">WELCOME TO <spam style="color: gold;">DELIGHT</spam></h1>
+                            <p class="zoom">"Step into Delight, where the passion for food meets the pleasure of company. Treat your taste buds to a world of flavors and make unforgettable memories with us."
+                            </p>
+                            <a href="{{ url_for('booknow') }}" target="_self"><button class="zoom">BOOK Now</button></a>
+                        </div>
+                    </div>
+
+                            
+
+                            <script>
+                                let zoomElements = document.querySelectorAll('.zoom');
+                                let delay = 0;
+            
+                                zoomElements.forEach(element => {
+                                    setTimeout(() => {
+                                        element.classList.add('show');
+                                    }, delay);
+                                    delay += 200; // adjust the delay time as needed
+                                });
+                            </script>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
