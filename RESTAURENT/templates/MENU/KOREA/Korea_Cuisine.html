@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Cuisine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='countries_style.css') }}">
+    <style>
+
+        .heading{
+            color:antiquewhite;
+
+        }
+        .paragraph{
+            color:antiquewhite;
+        }
+
+        .table1{
+            color: antiquewhite;
+
+        }
+        .table2{
+            color: antiquewhite;
+
+            border: 1px solid white;
+        }
+
+        /*For vega nd nono veg */
+        .th1{
+            color: antiquewhite;
+            
+        }
+        /*for veg table*/
+        th{
+            color: rgb(114, 42, 8);
+            
+        }
+
+        /*VEG and NON-veg Button like tables*/
+        .rounded-rectangle{
+            border: 1px solid white;
+        }
+
+        th.veg:hover {background-color: rgb(8, 114, 26)}
+        th.non-veg:hover {background-color: rgb(230, 65, 40)}
+        tr.row:hover{background-color: rgba(218, 171, 171, 0.884);
+                    color: rgb(120, 4, 4);}
+        a:link{
+            color: antiquewhite;
+        }
+        a:visited{
+            color: antiquewhite;
+        }
+        a:active{
+            color: antiquewhite;
+        }
+
+        .toppage{
+            background-color: rgb(5, 5, 5);
+            color: antiquewhite;
+        }
+
+        .toppage:hover{
+            background-color: antiquewhite;
+            color: rgb(5, 5, 5);
+        }
+
+    </style>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='IMAGES/Countries/Korea/cream.webp') }}');">
+
+    <div id="overlay" class="overlay" onclick="closeImage()" style="display:none;"></div>
+
+    <div id="myDiv">
+        <h1 class="heading">Korean Cuisine</h1>
+    </div>
+    <div>
+        <p class="paragraph">Korean cuisine is known for its bold and vibrant flavors, often featuring a delightful mix of spicy, savory, and sweet elements. Staples such as kimchi, a fermented vegetable dish, add a unique and tangy taste to many meals. This cuisine also places a strong emphasis on fermented foods, which not only enhance flavor but also offer numerous health benefits.</p>
+
+        <p class="paragraph">A key aspect of Korean dining is the variety of banchan, or side dishes, that accompany the main meal. These small dishes can include seasoned vegetables, pickled items, and protein options like tofu or small fish. The array of banchan provides a balance of flavors and textures that complement the main dishes beautifully.</p>
+
+        <p class="paragraph">Korean barbecue is a popular dining experience where diners grill meats such as beef, pork, and chicken at their table. These grilled meats are often marinated in flavorful sauces and are enjoyed with a variety of condiments and lettuce wraps. This communal style of dining is both interactive and social, making it a favorite among friends and family gatherings.</p>
+
+        <p class="paragraph">Hearty stews and soups also play a significant role in Korean cuisine. Dishes like kimchi jjigae (kimchi stew) and sundubu jjigae (soft tofu stew) are comforting and packed with rich, deep flavors. These dishes, along with classic rice dishes like bibimbap, showcase the depth and diversity of Korean culinary traditions.</p>
+
+    </div>
+
+    <div>
+        <table class="table1">
+            <tr>
+                <th class="rounded-rectangle th1 veg" onclick="location.href='#veg-link'">VEG</th>
+                <th class="rounded-rectangle th1 non-veg" onclick="location.href='#non-veg-link'">NON-VEG</th>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="veg-link">VEG</h1>
+        <hr>
+    </div>
+
+    <!--Veg Table -->
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite;">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/bibimbap.jpeg') }}" alt="Bibimbap Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Bibimbap</h1>
+                    <p style="font-size: small;">(A mixed rice dish topped with fresh vegetables, a fried egg, and gochujang (spicy chili paste).)</p>
+                </td>
+                <td>200/-</td>
+                <td>400/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/japchae.jpeg') }}" alt="Japchae Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Japchae</h1>
+                    <p style="font-size: small;">(Stir-fried glass noodles with vegetables and sometimes mushrooms, seasoned with soy sauce and sesame oil.)</p>
+                </td>
+                <td>150/-</td>
+                <td>300/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/kimchi_jjigae.jpeg') }}" alt="Kimchi Jjigae Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Kimchi Jjigae</h1>
+                    <p style="font-size: small;">(A spicy stew made with kimchi, tofu, and pork, simmered in a rich broth.)</p>
+                </td>
+                <td>250/-</td>
+                <td>500/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/tteokbokki.jpeg') }}" alt="Tteokbokki Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Tteokbokki</h1>
+                    <p style="font-size: small;">(Spicy rice cakes cooked in a savory and sweet gochujang-based sauce.)</p>
+                </td>
+                <td>175/-</td>
+                <td>350/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/haemul_pajeon.jpeg') }}" alt="Haemul Pajeon Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Haemul Pajeon</h1>
+                    <p style="font-size: small;">(A savory pancake made with seafood and green onions, often served with a dipping sauce.)</p>
+                </td>
+                <td>225/-</td>
+                <td>450/-</td>
+            </tr>
+        </table>
+    </div>
+
+    
+    <!--Non-Veg Table -->
+    <div>
+        <h1 style="color: antiquewhite; margin: 40px" id="non-veg-link">NON-VEG</h1>
+        <hr>
+    </div>
+    <div>
+        <table class="table2">
+            <tr style="background-color: antiquewhite;">
+                <th style="width: 20%;">IMAGE</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price (Half)</th>
+                <th style="width: 10%;">Price (Full)</th>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/bulgogi.jpeg') }}" alt="Bulgogi Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Bulgogi</h1>
+                    <p style="font-size: small;">(Marinated beef slices grilled to perfection, often served with rice and vegetables.)</p>
+                </td>
+                <td>300/-</td>
+                <td>600/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/samgyeopsal.jpeg') }}" alt="Samgyeopsal Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Samgyeopsal</h1>
+                    <p style="font-size: small;">(Thick slices of pork belly grilled at the table and often wrapped in lettuce with garlic, ssamjang (spicy dipping sauce), and other condiments.)</p>
+                </td>
+                <td>350/-</td>
+                <td>700/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/sundubu_jjigae.jpeg') }}" alt="Sundubu Jjigae Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Sundubu Jjigae</h1>
+                    <p style="font-size: small;">(A soft tofu stew with seafood, vegetables, and a spicy broth.)</p>
+                </td>
+                <td>275/-</td>
+                <td>550/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/galbi.jpeg') }}" alt="Galbi Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Galbi</h1>
+                    <p style="font-size: small;">(Marinated beef short ribs grilled to perfection, often served with a side of rice and kimchi.)</p>
+                </td>
+                <td>325/-</td>
+                <td>650/-</td>
+            </tr>
+            <tr class="nsml row">
+                <td>
+                    <img src="{{ url_for('static', filename='IMAGES/Countries/Korea/nonveghaemul_pajeon.jpeg') }}" alt="Haemul Pajeon Image" onclick="enlargeImage(this)">
+                </td>
+                <td>
+                    <h1>Haemul Pajeon</h1>
+                    <p style="font-size: small;">(A savory pancake made with seafood and green onions, often served with a dipping sauce.)</p>
+                </td>
+                <td>225/-</td>
+                <td>450/-</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div style="position: fixed; bottom: 20px; right: 70px;">
+        <button class="toppage" onclick="scrollToTop()">&#8593;</button>
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            var overlay = document.getElementById('overlay');
+            if (img.classList.contains('enlarged')) {
+                img.classList.remove('enlarged');
+                overlay.style.display = 'none';
+            } else {
+                var enlargedImages = document.querySelectorAll('.enlarged');
+                enlargedImages.forEach(function(enlargedImg) {
+                    enlargedImg.classList.remove('enlarged');
+                });
+                img.classList.add('enlarged');
+                overlay.style.display = 'block';
+            }
+        }
+
+        function closeImage() {
+            var enlargedImages = document.querySelectorAll('.enlarged');
+            enlargedImages.forEach(function(enlargedImg) {
+                enlargedImg.classList.remove('enlarged');
+            });
+            document.getElementById('overlay').style.display = 'none';
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>
