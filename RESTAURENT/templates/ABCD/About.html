@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR STORY</title>
+    <link rel="stylesheet" href="styled.css">
+    <style>
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* ensure it's on top of other elements */
+        }
+
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100%;
+        }
+
+        .zoom {
+            transform: scale(0);
+            transition: transform 1.0s ease-in-out;
+        }
+        
+       .zoom.show {
+            transform: scale(1);
+        }
+        /*img{
+            filter: brightness(0.5);
+        }*/
+
+        .table1{
+            border-collapse: collapse;
+            padding: 0;
+            border-spacing: 0;
+            width: 100%;
+            background-color: black;
+        }
+        table,tr,td{
+            border: none;
+        }
+        .tr1{
+            height: 80px;
+            width: 100%;
+        }
+        .td1{
+            width: 12%;
+            height: 30px;
+        }
+
+        .heading{
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+        .heading a{
+            color: gold;
+        }
+        .text{
+            text-decoration: none;
+            text-align: center;
+            font-size: 17px;
+            /*font-weight: bold;*/
+            color: #fff;
+            
+        }
+        a:hover{
+            color: gold;
+            transition: 0.5s all ease;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        .header{
+            background-image: url('');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            /*position: fixed;  added */
+            top: 80px; /* added */    width: 100%; /* added */
+            z-index: 0; /* added */
+            /*background-attachment: fixed;*/
+        }
+
+        .table2{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        table,tr,td{
+            border: none;
+        }
+
+        .image {
+            filter: brightness(0.8); /* adjust the value to your liking */
+        }
+
+        .content{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%,-50%);
+            color: #fff;
+            text-align: center;
+            /*background: rgba(0,0,0,0.5);*/
+            /*margin-top: 80px;*/
+        }
+        .content h1 {
+            font-size: 50px;
+        }
+        .content p{
+            font-size: 25px;
+            padding: 0px 10px;
+            color: #fff;
+        }
+        .overlay{
+            position: relative;
+            background: none;/*rgba(0,0,0,0.6);*/
+            height: 100vh;
+            /*position: absolute; /* added */
+            top: 0; /* added */
+            width: 100%; /* added */
+            z-index: 0; /* added */
+        }
+        .welcome{
+            font-size: 70px;
+            color: #e6de07;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 0;
+            /*padding-top: 30px; */
+        }
+
+        .visit{
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            padding-left: 20%;
+            padding-right: 20%;
+
+            color: rgb(4, 3, 97);
+        }
+        .hometown{
+            color: #ab1e1e94;
+            font-size: 25px;
+            font-weight: lighter;
+            padding-bottom: 20px 20px;
+            margin-bottom: 20px 20px;
+            text-decoration:underline;
+        }
+
+        .overlay{
+            background: rgba(0, 0, 0, 0.473);
+            height: 83vh;
+            position: absolute; /* added */
+            top: 0; /* added */
+            width: 100%; /* added */
+            z-index: 0; /* added */
+            margin-top: 80px;
+        }
+        .table-container {
+            position: relative;
+            z-index: 1; /* ensure the table is on top of the overlay */
+        }
+
+        /* OUR STORY */
+        .story{
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #3b4303;
+            padding: 20px 70px;
+        }
+        .storyheading{
+            font-size: 50px;
+            color: #656202;
+            font-weight: bold;
+            /*padding: 20px;*/
+        }
+
+        /*content scrolling*/
+        /*button*/
+        .button1{
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 6px;
+            transition: 0.5s all ease;
+        }
+
+        .button1:hover{
+            background: black;
+            color: red;
+        }
+
+        .element-to-zoom {
+            transform: scale(1);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .element-to-zoom.zoom {
+            transform: scale(1.2);
+            /*animation-range:entry 0 cover;
+            animation-timeline: var(#ddd);*/
+        }
+
+        .toppage{
+            background-color: rgb(16, 16, 16);
+            color: #fafaf5;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5%;
+            margin-left: 93%;
+            border-radius: 100px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .toppage:hover{
+            background-color: #1e1e1c;
+            color: #e3eb0f;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <nav>
+                <div class="table-container">
+                    <table class="table1">
+                        <tr class="tr1">
+                            <td class=" heading td1" style="width: 28%;"><div class="logo zoom">
+                                <a href="{{ url_for('delight') }}">DELIGHT</a>
+                                </div>
+                            </td>
+                            <td class="text td1"><a href="{{ url_for('delight') }}">HOME</a></td>
+                            <td class="text td1"><a href="{{ url_for('about') }}">OUR STORY</a></td>
+                            <td class="text td1"><a href="{{ url_for('menu') }}" target="_self">MENU</a></td>
+                            <td class="text td1"><a href="{{ url_for('reserve') }}">RESERVATION</a></td>
+                            <td class="text td1"><a href="{{ url_for('service') }}">SERVICES</a></td>
+                            <td class="text td1"><a href="{{ url_for('contact') }}">CONTACT US</a></td>
+                            <td class="text td1"><a href="{{ url_for('logout') }}">LOGOUT</a></td>
+                        </tr>
+                    </table>
+                </div>  
+            </nav>
+        
+            <table class="table2" style="padding: 2px; margin-top: 80px;margin-bottom: 0%; width: 100%;">
+                            <tr >
+                                <td colspan="2" style="width: 50%; height: 100%;">
+                                    <img class="image" src="{{ url_for('static', filename='IMAGES/ABCDImg/R1.jpeg') }}" alt="Img" style="width: 100%; height: 500px; object-fit: cover; " >
+                                    <div class="overlay">
+                                        <div class="content ">
+                                            <spam class="welcome"><br><br>Welcome to Delight</spam>
+                                            <p>
+                                                    Where every bite is a culinary journey, and every moment is a delight.<br><br>
+                                                    Located in the heart of [HomeTown], Delight is a restaurant that embodies the essence of fine dining, warm hospitality, and exceptional service. Our mission is to provide an unforgettable culinary experience that will leave you feeling delighted, satisfied, and eager to return.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="element-to-zoom">
+                                <td colspan="2" class="visit"><p>Our passion is sourcing and serving the best food, drink & gifts possible - from freshly prepared foods made in house, to thoughtfully curated wine, beer, and spirits, to specialty gifts & groceries from the island and beyond. 
+                                    <br><br><a href="" class="hometown">Visit us in HomeTown.</a> <br><br><br>
+                                </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="element-to-zoom" style="width: 65%; max-height: 100%;background-color: #f6f39aea;">
+                                    <p class="story"><spam class="storyheading">OUR STORY</spam><br><br>
+                                        Delight is the brainchild of [Tejaswi], a passionate foodie who has always been driven by a desire to share the joy of good food with others. With a rich culinary heritage and a deep understanding of the local palate, our founder has crafted a menu that is both innovative and authentic, blending traditional flavors with modern twists and surprises.
+                                    </p>
+                                </td>
+                                <td style="width: 35%; max-height: 100%;">
+                                    <img src="{{ url_for('static', filename='IMAGES/ABCDImg/Me.jpg') }}" alt="Founder" style="width: 100%; height: 50%; object-fit: cover;" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 35%; max-height: 100%;">
+                                    <img src="{{ url_for('static', filename='IMAGES/ABCDImg/Indian-Cuisine-1536x1024.jpg') }}" alt="Cuisine" style="width: 100%; height: 50%; object-fit: cover;" >
+                                </td>
+                                <td class="element-to-zoom" style="width: 65%; max-height: 100%;background-color: #444203c0;">
+                                    <p class="story" style="color: #f6f39abd;"><spam class="storyheading" style="color: #e6de07;">OUR CUISINE</spam><br><br>
+                                        At Delight, we take pride in our carefully curated menu, which features an array of dishes that showcase the best of [Cuisine Type]. From our signature appetizers to our decadent desserts, every dish is crafted with love, care, and attention to detail, using only the freshest ingredients and time-honored techniques.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="element-to-zoom" style="width: 35%; max-height: 100%;background-color: #f6f39aea;">
+                                    <p class="story" style="color:  #444203c0;"><spam class="storyheading" style="color: #3b4303;">OUR AMBIANCE</spam><br><br>
+                                        Step into Delight, and you'll be transported to a world of warmth and elegance. Our beautifully designed interior, complete with [unique features], provides the perfect setting for a romantic evening, a family gathering, or a night out with friends. Our friendly staff, attentive service, and soothing ambiance will make you feel right at home.
+                                    </p>
+                                </td>
+                                <td style="width: 65%; max-height: 100%;">
+                                    <img src="{{ url_for('static', filename='IMAGES/ABCDImg/Ambiance-1024x683.jpg') }}" alt="Cuisine" style="width: 100%; height: 50%; object-fit: cover;" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="">
+                                    <p class="story" style="color:rgb(4, 3, 97); padding: 20px; font-size: 20px;"><span class="storyheading" style="color: rgb(2, 18, 60);">JOIN US</span><br>
+                                        Whether you're a food enthusiast, a special occasion celebrant, or simply looking for a great meal, we invite you to join us at Delight. Let us treat you to an unforgettable dining experience that will leave you feeling delighted, satisfied, and eager to return.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #0f1101;">
+                                <td colspan="2" class="">
+                                    <p class="story" style="color:#f6f39aea; padding: 20px; font-size: 20px;"><span class="storyheading" style="color: gold;">BOOK YOUR TABLE NOW</span><br>
+                                        Call us at [Phone Number] or book online to reserve your table. We can't wait to welcome you to Delight!
+                                    </p>
+                                    <div>
+                                        <a href="{{ url_for('booknow') }}" target="_blank"><button class="zoom element-to-zoom button1" style="display: block; margin: 0 auto; margin-bottom: 20px;">BOOK NOW</button></a>
+                                    </div>
+                                </td>
+                            </tr>
+            </table>
+
+            <div style="position: fixed; bottom: 20px; right: 70px;">
+                <button class="toppage" onclick="scrollToTop()">&#8593;</button>
+            </div>
+
+            <script>
+                function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth scrolling
+                });
+            }
+            </script>
+
+            <script>
+                let zoomElements = document.querySelectorAll('.zoom');
+                let delay = 0;
+
+                zoomElements.forEach(element => {
+                    setTimeout(() => {
+                        element.classList.add('show');
+                    }, delay);
+                    delay += 200; // adjust the delay time as needed
+                });
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+            <script>
+                                // Create a new ScrollMagic controller
+                const controller = new ScrollMagic.Controller();
+
+                // Create a new scene that triggers when the element comes into view
+                const scene = new ScrollMagic.Scene({
+                triggerElement: ".element-to-zoom", // replace with the class or ID of your element
+                triggerHook: 0.5, // adjust the hook position to your liking
+                })
+                .setClassToggle(".element-to-zoom", "zoom") // add the "zoom" class to the element when the scene is in view
+                .addTo(controller);
+            </script>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
