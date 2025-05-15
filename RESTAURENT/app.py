@@ -2,6 +2,7 @@ import os
 from flask import Flask, flash, redirect, render_template, request, session, url_for, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import check_password_hash, generate_password_hash
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -9,6 +10,16 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///restaurant.db'
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 db = SQLAlchemy(app)
+
+# Mail Configuration
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'delight.cs50@gmail.com'
+app.config['MAIL_PASSWORD'] = 'hhbrmtmsvvpfxyso' 
+
+mail = Mail(app)
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -33,6 +44,16 @@ class Contact(db.Model):
     name = db.Column(db.String(100), nullable=False) 
     email = db.Column(db.String(120), nullable=False) 
     message = db.Column(db.Text, nullable=False)
+
+class Booking(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+    phone = db.Column(db.String(20), nullable=False)
+    date = db.Column(db.String(20), nullable=False)
+    time = db.Column(db.String(20), nullable=False)
+    guests = db.Column(db.Integer, nullable=False)
+    requests = db.Column(db.Text, nullable=True)
 
 @app.route('/')
 def index():
@@ -103,44 +124,83 @@ def booknow():
         phone = request.form['phone']
         date = request.form['date']
         time = request.form['time']
-        guests = request.form['guests']
-        requests = request.form['requests']
-        
-        # Create a new reservation
-        new_reservation = Reservation(name=name, email=email, phone=phone, date=date, time=time, guests=guests, requests=requests)
-        
+        guests = int(request.form['guests'])
+        requests_text = request.form.get('requests', '')
+
+        # Create new booking entry
+        new_booking = Booking(
+            name=name,
+            email=email,
+            phone=phone,
+            date=date,
+            time=time,
+            guests=guests,
+            requests=requests_text
+        )
+
         try:
-            db.session.add(new_reservation)
+            db.session.add(new_booking)
             db.session.commit()
-            flash('Reservation successful!', 'success')
-            return redirect(url_for('delight'))
-        except:
-            flash('There was an issue with your reservation', 'danger')
+
+            # Send booking confirmation email to restaurant/admin
+            msg = Message(subject=f"New Table Booking from {name}",
+                          sender='delight.cs50@gmail.com',
+                          recipients=['delight.cs50@gmail.com'])
+            msg.body = f"""
+            New booking details:
+
+            Name: {name}
+            Email: {email}
+            Phone: {phone}
+            Date: {date}
+            Time: {time}
+            Guests: {guests}
+            Special Requests: {requests_text}
+            """
+            mail.send(msg)
+
+            flash('Your booking has been received! We will confirm soon.', 'success')
             return redirect(url_for('booknow'))
-        
-    
+
+        except Exception as e:
+            print("Error saving booking or sending email:", e)
+            flash('There was an issue processing your booking. Please try again.', 'danger')
+            return redirect(url_for('booknow'))
+
     return render_template('booknow.html')
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
-        message = request.form['message']
+        message_text = request.form['message']
 
         # Create a new contact message
-        new_contact = Contact(name=name, email=email, message=message)
+        new_contact = Contact(name=name, email=email, message=message_text)
 
         try:
             db.session.add(new_contact)
             db.session.commit()
+
+            # Send email
+            msg = Message(subject=f"New Contact Message from {name}",
+                          sender='delight.cs50@gmail.com',
+                          recipients=['delight.cs50@gmail.com'])
+            msg.body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message_text}"
+            mail.send(msg)
+
             flash('Message sent successfully!', 'success')
             return redirect(url_for('contact'))
-        except:
+
+        except Exception as e:
+            print("Error:", e)
             flash('There was an issue with your message', 'danger')
             return redirect(url_for('contact'))
-    
+
     return render_template('contact.html')
+
 
 @app.route('/delight')
 def delight():
@@ -229,17 +289,13 @@ def australia_cuisine():
         return redirect(url_for('login'))
     return render_template('MENU/AUSTRALIA/Australia_Cuisine.html')
 
-# Add more routes as needed
 
-
-#ABCD
 @app.route('/about')
 def about():
     if 'user_id' not in session:
         return redirect(url_for('login'))
     return render_template('ABCD/About.html')
 
-#ABCD
 @app.route('/reserve')
 def reserve():
     if 'user_id' not in session:
