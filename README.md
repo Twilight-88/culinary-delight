@@ -158,7 +158,7 @@ A text file listing all the dependencies and libraries required for your project
 
   <li><bold>Reservation & Contact Information:</bold> Our restaurant website allows users to book reservations and send messages directly to the owner. All reservations and inquiries are automatically forwarded to the owner via email for seamless communication.</li>
 
-  ![Screenshot 2024-12-31 022216](https://github.com/user-attachments/assets/e4e297b5-4fa7-40c9-b7ed-e8131b7b9866)
+ ![Screenshot 2025-05-21 171045](https://github.com/user-attachments/assets/4af81ae5-99d2-4090-9662-91a36cb621ab)
 
   <li><bold>Challenges Faced:</bold> Developing a user-friendly and responsive design was one of the main challenges. Ensuring that the website works seamlessly across various devices required extensive testing and adjustments. Another challenge was integrating the various country-specific menus, which involved managing multiple datasets and ensuring that the correct menu is displayed based on the user's selection.</li>
   
