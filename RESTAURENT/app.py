@@ -15,8 +15,8 @@ db = SQLAlchemy(app)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'delight.cs50@gmail.com'
-app.config['MAIL_PASSWORD'] = 'hhbrmtmsvvpfxyso' 
+app.config['MAIL_USERNAME'] = 'Enter your Mail Username'
+app.config['MAIL_PASSWORD'] = 'Enter your Mail PAssword using App Password' 
 
 mail = Mail(app)
 
